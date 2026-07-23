@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hasad | Growing Quality, Delivering Trust — Premium Poultry Farming</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231E5F3A'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23D4AF37' font-family='Georgia'%3EH%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#1E5F3A">
+<meta name="description" content="Hasad — a premium Saudi poultry farming company delivering fresh chicken, day-old chicks, poultry products and feed with uncompromising quality, biosecurity and sustainability. Growing Quality, Delivering Trust.">
+<meta name="keywords" content="Hasad, poultry farming Saudi Arabia, fresh chicken, day-old chicks, poultry products, feed, biosecurity, sustainable farming">
+<meta property="og:title" content="Hasad — Growing Quality, Delivering Trust">
+<meta property="og:description" content="A premium poultry farming company rooted in quality, sustainability and trust.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+<style>
+/* ══════════════════════════════════
+   ROOT & RESET
+══════════════════════════════════ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#D4AF37;--gold-dark:#AD8A28;--gold-light:#F3E2A9;--gold-glow:rgba(212,175,55,.35);
+  --green:#1E5F3A;--green-dark:#0F3A22;--green-deep:#0A2A18;--green-light:#E3EFE6;
+  --cream:#FBF8F1;--ink:#1A2620;--mid:#4E5C53;--gray:#7C8A80;--border:#E4DFC9;
+  --white:#ffffff;
+  --shadow-sm:0 2px 10px rgba(15,58,34,.06),0 8px 28px rgba(15,58,34,.06);
+  --shadow-md:0 6px 20px rgba(15,58,34,.08),0 24px 56px rgba(15,58,34,.10);
+  --shadow-gold:0 8px 24px rgba(212,175,55,.28),0 20px 44px rgba(212,175,55,.16);
+  --tr:.35s cubic-bezier(.4,0,.2,1);
+  --container-max:1360px;
+  --container-pad:clamp(1.2rem,3vw,4rem);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Manrope',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background .3s ease,color .3s ease}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer}
+h1,h2,h3,h4{font-family:'Fraunces',serif}
+
+.container{width:100%;max-width:var(--container-max);margin:0 auto;padding:0 var(--container-pad)}
+section,.ticker-bar,.site-footer{width:100%}
+@media(min-width:1700px){:root{--container-max:1520px}}
+
+/* utility */
+.fade-up{opacity:0;transform:translateY(34px)}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:1rem;padding:.35rem .9rem;background:var(--green-light);border-radius:99px;border:1px solid rgba(30,95,58,.18)}
+body.dark-mode .eyebrow{background:rgba(212,175,55,.1);color:var(--gold-light);border-color:rgba(212,175,55,.25)}
+.sec-title{font-size:clamp(1.8rem,3vw,3rem);font-weight:600;letter-spacing:-.02em;line-height:1.12;margin-bottom:.7rem;color:var(--green-dark)}
+body.dark-mode .sec-title{color:var(--cream)}
+.sec-title em{font-style:italic;background:linear-gradient(100deg,var(--gold-dark) 25%,var(--gold-light) 50%,var(--gold-dark) 75%);background-size:220% 100%;background-position:180% 0;-webkit-background-clip:text;background-clip:text;color:transparent}
+body.dark-mode .sec-title em{background:linear-gradient(100deg,var(--gold) 25%,#FCEFC0 50%,var(--gold) 75%);background-size:220% 100%;background-position:180% 0;-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-sub{font-size:clamp(.95rem,1.1vw,1.08rem);color:var(--mid);line-height:1.75;max-width:600px}
+
+/* word-by-word reveal + number glow utilities */
+.word-mask{display:inline-block;overflow:hidden;vertical-align:top}
+.word-inner{display:inline-block;will-change:transform}
+@keyframes countGlow{0%{text-shadow:0 0 0 rgba(212,175,55,0)}40%{text-shadow:0 0 20px rgba(212,175,55,.9)}100%{text-shadow:0 0 0 rgba(212,175,55,0)}}
+.count-glow{animation:countGlow .9s ease}
+
+/* wheat divider — signature element */
+.scroll-progress{position:fixed;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold-dark),var(--gold),var(--gold-light));transform-origin:0 50%;transform:scaleX(0);z-index:950;pointer-events:none}
+
+.wheat-rule{width:74px;height:22px;margin:1rem 0 2.2rem;opacity:.9}
+.wheat-rule path{stroke:var(--gold-dark);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-dasharray:140;stroke-dashoffset:140}
+
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 2.1rem;border-radius:99px;font-weight:700;font-size:.92rem;transition:var(--tr);border:2px solid transparent;white-space:nowrap;position:relative;overflow:hidden}
+.btn .ripple,.cf-submit .ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(0);opacity:.55;pointer-events:none;animation:rippleFx .65s ease-out forwards}
+.btn-outline .ripple{background:rgba(15,58,34,.2)}
+body.dark-mode .btn-outline .ripple{background:rgba(255,255,255,.3)}
+@keyframes rippleFx{to{transform:scale(1);opacity:0}}
+.btn-primary{background:linear-gradient(135deg,#E4C868,var(--gold-dark));color:var(--green-deep);box-shadow:var(--shadow-gold)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(212,175,55,.35),0 26px 50px rgba(212,175,55,.2)}
+.btn-outline{background:transparent;border-color:rgba(255,255,255,.6);color:#fff}
+.btn-outline:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.btn-solid-green{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(30,95,58,.28)}
+.btn-solid-green:hover{background:var(--green-dark);transform:translateY(-3px)}
+.btn-sm{padding:.6rem 1.4rem;font-size:.8rem}
+.btn i{font-size:.85em}
+
+.icon-btn{background:transparent;border:1px solid var(--border);color:var(--mid);display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.5rem .85rem;border-radius:10px;font-size:.8rem;font-weight:700;transition:var(--tr);min-width:40px;height:40px}
+.icon-btn:hover{color:var(--green);border-color:var(--green);background:var(--green-light)}
+body.dark-mode .icon-btn{color:var(--cream);border-color:#2b3b32}
+body.dark-mode .icon-btn:hover{background:rgba(212,175,55,.12);border-color:var(--gold);color:var(--gold)}
+
+/* ══════════════════════════════════
+   DARK MODE
+══════════════════════════════════ */
+body.dark-mode{--cream:#0D1512;--ink:#EFEAD9;--mid:#A8B2A9;--border:#233029;background:var(--cream);color:var(--ink)}
+body.dark-mode .navbar{background:rgba(13,21,18,.82);backdrop-filter:blur(18px)}
+body.dark-mode .nav-link{color:#DCE4DC}
+body.dark-mode .nav-link:hover,body.dark-mode .nav-link.active-section{color:var(--gold)}
+body.dark-mode .mega-menu{background:rgba(15,24,20,.96);border-color:#233029}
+body.dark-mode .mega-link:hover{background:rgba(212,175,55,.08)}
+body.dark-mode .mega-link-text strong{color:var(--cream)}
+body.dark-mode .hamburger span{background:var(--cream)}
+body.dark-mode .card,body.dark-mode .product-card,body.dark-mode .pillar-card,body.dark-mode .value-card{background:#141F1A;border-color:#233029}
+body.dark-mode .about-section,body.dark-mode .pillars-section,body.dark-mode .stats-band{background:#0F1815}
+body.dark-mode .drawer-panel{background:#101a16}
+body.dark-mode .drawer-link{color:var(--cream)}
+body.dark-mode .drawer-close{background:#182119;color:var(--cream);border-color:#233029}
+body.dark-mode .contact-form-wrap{background:#141F1A;border-color:#233029}
+body.dark-mode .cf-group input,body.dark-mode .cf-group select,body.dark-mode .cf-group textarea{background:#0D1512;border-color:#2b3b32;color:var(--cream)}
+body.dark-mode .site-footer{background:linear-gradient(160deg,#08110D 0%,#0A1310 100%)}
+body.dark-mode .gallery-item::before{background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.92) 100%)}
+body.dark-mode .op-num{box-shadow:0 4px 14px rgba(212,175,55,.25)}
+
+/* ══════════════════════════════════
+   NAVBAR
+══════════════════════════════════ */
+.nav-container{width:100%;max-width:var(--container-max);margin:0 auto;padding:0 var(--container-pad)}
+.navbar{position:sticky;top:0;z-index:900;background:rgba(251,248,241,.85);backdrop-filter:blur(18px) saturate(160%);border-bottom:1px solid rgba(212,175,55,.15);transition:background .25s ease,box-shadow .25s ease;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.navbar::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .4s ease}
+.navbar.floating::after{opacity:1}
+.navbar.floating{background:rgba(251,248,241,.96);box-shadow:0 1px 0 rgba(0,0,0,.04),0 10px 30px rgba(15,58,34,.08)}
+body.dark-mode .navbar.floating{background:rgba(13,21,18,.94);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+
+.nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:76px;padding:.3rem 0;position:relative;z-index:1;transition:min-height .3s ease}
+.navbar.scrolled-logo .nav-inner{min-height:64px}
+.navbar.scrolled-logo .nav-logo-mark{width:58px;height:58px}
+
+.nav-logo{display:flex;align-items:center;gap:.65rem;flex-shrink:0}
+.nav-logo-mark{width:clamp(63px,6.6vw,78px);height:clamp(63px,6.6vw,78px);border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 10px rgba(15,58,34,.18);position:relative;overflow:hidden;border:1.5px solid rgba(212,175,55,.35);padding:5px;transition:var(--tr)}
+.footer-brand .nav-logo-mark{width:62px;height:62px}
+.nav-logo-mark svg{width:60%;height:60%}
+.nav-logo-mark img{width:100%;height:100%;object-fit:contain}
+body.dark-mode .nav-logo-mark{background:var(--cream);border-color:rgba(212,175,55,.45)}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1}
+.nav-logo-text strong{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:700;letter-spacing:.02em;color:var(--green-dark)}
+body.dark-mode .nav-logo-text strong{color:var(--cream)}
+.nav-logo-text span{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-top:.15rem}
+
+.nav-menu{display:flex;align-items:stretch}
+.nav-item{position:relative;display:flex;align-items:center}
+.nav-link{display:flex;align-items:center;gap:.3rem;padding:0 clamp(.5rem,.9vw,1.1rem);height:100%;font-size:.9rem;font-weight:600;color:var(--mid);transition:color .2s ease;white-space:nowrap;position:relative}
+.nav-link::after{content:'';position:absolute;bottom:-3px;left:50%;width:0;height:2.5px;background:var(--gold);transition:width .3s ease,left .3s ease;border-radius:3px}
+.nav-link:hover{color:var(--green)}
+body.dark-mode .nav-link:hover{color:var(--gold)}
+.nav-link:hover::after{width:100%;left:0}
+.nav-link i{font-size:.62rem;transition:transform .25s ease}
+.nav-item:hover .nav-link i{transform:rotate(180deg)}
+.nav-link.active-section{color:var(--green)}
+.nav-link.active-section::after{width:100%;left:0}
+body.dark-mode .nav-link.active-section{color:var(--gold)}
+
+.nav-actions{display:flex;align-items:center;gap:clamp(.4rem,.6vw,.75rem);padding-left:.5rem;flex-shrink:0}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:.5rem;cursor:pointer}
+.hamburger span{display:block;width:22px;height:2.5px;background:var(--green-dark);border-radius:2px;transition:var(--tr)}
+
+/* mega menu */
+.mega-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);background:rgba(251,248,241,.98);backdrop-filter:blur(20px);border-radius:18px;box-shadow:var(--shadow-md),0 0 0 1px rgba(212,175,55,.1);border:1px solid var(--border);padding:1.8rem;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,transform .25s ease,visibility .25s;min-width:620px;z-index:100}
+.nav-item:hover .mega-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateX(-50%) translateY(0)}
+.mega-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+.mega-menu.cols-4 .mega-grid{grid-template-columns:repeat(4,1fr)}
+.mega-col h5{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:.8rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.mega-link{display:flex;align-items:flex-start;gap:.7rem;padding:.6rem .6rem;border-radius:12px;transition:background .15s ease,transform .15s ease}
+.mega-link:hover{background:var(--green-light);transform:translateX(4px)}
+.mega-link-icon{width:34px;height:34px;border-radius:10px;background:var(--green-light);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;transition:var(--tr)}
+.mega-link:hover .mega-link-icon{background:var(--green);color:#fff}
+.mega-link-text strong{display:block;font-size:.86rem;font-weight:700;color:var(--ink);margin-bottom:.1rem}
+.mega-link-text span{font-size:.76rem;color:var(--gray);line-height:1.4}
+.mega-menu.narrow{min-width:300px}
+.mega-menu.narrow .mega-grid{grid-template-columns:1fr}
+
+/* ══════════════════════════════════
+   HERO
+══════════════════════════════════ */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;width:100%;display:flex;align-items:center}
+.hero-bg-wrap{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;z-index:0;will-change:opacity,transform;transition:opacity 1.6s cubic-bezier(.45,0,.2,1),filter 1.6s ease}
+.hero-bg.active{opacity:1;z-index:1;animation:heroKenBurns 7s cubic-bezier(.25,.1,.25,1) forwards}
+.hero-bg.leaving{opacity:0;filter:brightness(1.08)}
+@keyframes heroKenBurns{
+  0%{transform:scale(1.14) translate(0,0)}
+  100%{transform:scale(1.02) translate(-0.5%,-0.5%)}
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-bg{transition:opacity .6s ease}
+  .hero-bg.active{animation:none;transform:scale(1.06)}
+}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,42,24,.92) 0%,rgba(10,42,24,.62) 48%,rgba(10,42,24,.28) 100%)}
+.hero-overlay-2{position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 78% 30%,rgba(212,175,55,.16),transparent 70%)}
+.hero-content{position:relative;z-index:2;width:100%;padding:0 var(--container-pad)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;color:var(--gold-light);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.3rem}
+.hero-eyebrow::before{content:'';width:26px;height:2px;background:var(--gold)}
+.hero h1{font-size:clamp(2.3rem,5vw,4.6rem);font-weight:600;line-height:1.08;letter-spacing:-.02em;color:#fff;max-width:min(820px,86%);margin-bottom:1.3rem}
+.hero h1 em{font-style:italic;font-weight:500;background:linear-gradient(100deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:clamp(1rem,1.15vw,1.15rem);color:rgba(255,255,255,.82);max-width:min(560px,74%);line-height:1.75;margin-bottom:2.3rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.hero-badges{display:flex;gap:clamp(1rem,3vw,2.6rem);flex-wrap:wrap}
+.hbadge-num{font-family:'Fraunces',serif;font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:700;color:var(--gold);letter-spacing:-.02em;line-height:1}
+.hbadge-label{font-size:.74rem;font-weight:600;color:rgba(255,255,255,.72);margin-top:.3rem;letter-spacing:.03em}
+.hero-scroll{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(255,255,255,.55);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+
+/* animated wave divider — hero into the ticker bar */
+.wave-divider{position:absolute;left:0;right:0;bottom:-1px;height:60px;overflow:hidden;z-index:3;line-height:0;pointer-events:none}
+.wave-divider svg{width:200%;height:100%;display:block;animation:waveDrift 18s linear infinite}
+.wave-divider path{fill:var(--green-dark)}
+@keyframes waveDrift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.scroll-dot{width:30px;height:48px;border:2px solid rgba(255,255,255,.35);border-radius:99px;position:relative}
+.scroll-dot::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:5px;height:9px;background:var(--gold);border-radius:40% 40% 50% 50%/30% 30% 70% 70%;animation:liquidDrop 1.8s ease-in-out infinite}
+@keyframes liquidDrop{0%{top:6px;opacity:1}45%{top:16px;opacity:.7}85%{top:28px;opacity:.25}100%{top:6px;opacity:1}}
+
+/* ══════════════════════════════════
+   TICKER — infinite loop
+══════════════════════════════════ */
+.ticker-bar{background:linear-gradient(90deg,var(--green-dark) 0%,var(--green) 50%,var(--green-dark) 100%);overflow:hidden;padding:.6rem 0;border-bottom:1px solid rgba(212,175,55,.2)}
+.ticker-track{display:flex;white-space:nowrap;animation:tickerMove 38s linear infinite;width:max-content}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{display:inline-flex;align-items:center;gap:.55rem;margin-right:3.2rem;font-size:.82rem;font-weight:600;color:#fff}
+.ticker-item i{color:var(--gold-light);font-size:.72rem}
+.ticker-sep{color:rgba(255,255,255,.3);margin-right:3.2rem}
+@keyframes tickerMove{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ══════════════════════════════════
+   SECTION SHELLS
+══════════════════════════════════ */
+.section{padding:clamp(3.5rem,7vw,7rem) 0;position:relative}
+.about-section,.pillars-section,.stats-band{background:var(--green-light)}
+.about-section,.pillars-section{position:relative}
+.about-section::before,.pillars-section::before{content:'';position:absolute;top:0;left:0;right:0;height:90px;background:linear-gradient(180deg,var(--cream),transparent);pointer-events:none;z-index:0}
+.about-section::after,.pillars-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:90px;background:linear-gradient(0deg,var(--cream),transparent);pointer-events:none;z-index:0}
+body.dark-mode .about-section::before,body.dark-mode .pillars-section::before{background:linear-gradient(180deg,var(--cream),transparent)}
+body.dark-mode .about-section::after,body.dark-mode .pillars-section::after{background:linear-gradient(0deg,var(--cream),transparent)}
+.section-head{max-width:680px;margin-bottom:3rem;position:relative}
+.section-head::before{content:'';position:absolute;top:-70px;left:-90px;width:340px;height:340px;background:radial-gradient(circle,rgba(212,175,55,.16),transparent 70%);filter:blur(6px);z-index:0;pointer-events:none;animation:meshDrift 16s ease-in-out infinite alternate}
+.section-head.center::before{left:50%;margin-left:-170px}
+.section-head>*{position:relative;z-index:1}
+@keyframes meshDrift{0%{transform:translate(0,0) scale(1)}100%{transform:translate(30px,18px) scale(1.15)}}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head.center .wheat-rule{margin-left:auto;margin-right:auto}
+
+/* floating decorative accents */
+.deco-float{position:absolute;color:var(--gold);opacity:.16;pointer-events:none;z-index:0;animation:decoBob 6.5s ease-in-out infinite}
+.deco-float.d2{animation-delay:1.4s}
+.deco-float.d3{animation-delay:2.8s}
+@keyframes decoBob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-16px) rotate(4deg)}}
+
+/* intro / stats */
+.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center}
+.intro-img-wrap{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-md)}
+.intro-img-wrap img{width:100%;height:clamp(320px,32vw,460px);object-fit:cover}
+.intro-badge{position:absolute;bottom:1.2rem;left:1.2rem;background:rgba(251,248,241,.94);backdrop-filter:blur(10px);border-radius:16px;padding:.9rem 1.3rem;display:flex;align-items:center;gap:.8rem;box-shadow:var(--shadow-sm)}
+.intro-badge i{color:var(--gold-dark);font-size:1.3rem}
+.intro-badge strong{display:block;font-size:.95rem;color:var(--green-dark)}
+.intro-badge span{font-size:.72rem;color:var(--mid)}
+
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3.2rem}
+.stat-item{text-align:left;border-left:2px solid var(--gold);padding-left:1rem}
+.stat-num{font-family:'Fraunces',serif;font-size:clamp(1.8rem,2.4vw,2.6rem);font-weight:700;color:var(--green-dark)}
+body.dark-mode .stat-num{color:var(--gold)}
+.stat-label{font-size:.8rem;color:var(--mid);margin-top:.25rem;line-height:1.4}
+
+/* values grid */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.value-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:2rem 1.7rem;transition:var(--tr)}
+.value-card:hover{box-shadow:var(--shadow-md);border-color:var(--gold)}
+.value-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--green-dark));color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1.2rem}
+.value-card h4{font-size:1.1rem;font-weight:600;margin-bottom:.5rem;color:var(--green-dark)}
+body.dark-mode .value-card h4{color:var(--cream)}
+.value-card p{font-size:.86rem;color:var(--mid);line-height:1.65}
+
+/* why choose / features */
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:2.5rem}
+.feat-card{background:var(--white);border:1px solid var(--border);border-radius:18px;padding:1.8rem 1.5rem;text-align:center;transition:var(--tr)}
+.feat-card:hover{border-color:var(--gold)}
+.feat-icon{width:46px;height:46px;border-radius:50%;background:var(--gold-light);color:var(--gold-dark);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin:0 auto 1rem}
+.feat-card h4{font-size:.98rem;font-weight:700;margin-bottom:.45rem;color:var(--green-dark)}
+body.dark-mode .feat-card h4{color:var(--cream)}
+.feat-card p{font-size:.82rem;color:var(--mid);line-height:1.55}
+
+/* products */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+.product-card{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--tr);background:var(--white);border:1px solid var(--border)}
+.product-card:hover{box-shadow:var(--shadow-md)}
+.product-img{height:210px;overflow:hidden}
+.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.product-card:hover .product-img img{transform:scale(1.08)}
+.product-body{padding:1.4rem 1.4rem 1.6rem}
+.product-tag{font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:.4rem;display:block}
+.product-body h4{font-size:1.05rem;font-weight:600;margin-bottom:.5rem;color:var(--green-dark)}
+body.dark-mode .product-body h4{color:var(--cream)}
+.product-body p{font-size:.83rem;color:var(--mid);line-height:1.6;margin-bottom:.9rem}
+.product-specs{display:flex;flex-wrap:wrap;gap:.4rem}
+.spec-chip{font-size:.68rem;font-weight:700;background:var(--green-light);color:var(--green-dark);padding:.3rem .65rem;border-radius:99px}
+body.dark-mode .spec-chip{background:rgba(212,175,55,.1);color:var(--gold-light)}
+
+/* operations timeline */
+.ops-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:start}
+.ops-img{position:sticky;top:6.5rem;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-md)}
+.ops-img img{width:100%;height:clamp(340px,38vw,520px);object-fit:cover}
+.ops-steps{display:flex;flex-direction:column}
+.op-step{display:flex;gap:1.3rem;position:relative}
+.op-step:not(:last-child)::after{content:'';position:absolute;left:22px;top:56px;bottom:0;width:2px;background:linear-gradient(180deg,rgba(212,175,55,.4),rgba(212,175,55,.05))}
+.op-num{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--green-deep);font-size:1.1rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;transition:var(--tr);box-shadow:0 4px 12px rgba(212,175,55,.3)}
+.op-step:hover .op-num{background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff}
+.op-body{padding:.15rem 0 2.2rem}
+.op-body strong{font-size:1.02rem;font-weight:700;display:block;margin-bottom:.35rem;color:var(--green-dark)}
+body.dark-mode .op-body strong{color:var(--cream)}
+.op-body p{font-size:.85rem;color:var(--mid);line-height:1.65}
+
+/* pillars: food safety / QA / env / satisfaction */
+.pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+.pillar-card{background:var(--white);border-radius:20px;padding:2rem 1.6rem;border:1px solid var(--border);text-align:center}
+.pillar-ring{width:64px;height:64px;margin:0 auto 1.1rem;position:relative}
+.pillar-ring svg{transform:rotate(-90deg)}
+.pillar-ring circle{fill:none;stroke-width:6}
+.pillar-ring .bg{stroke:var(--border)}
+.pillar-ring .fg{stroke:var(--gold);stroke-linecap:round;stroke-dasharray:170;stroke-dashoffset:170}
+.pillar-ring span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;color:var(--green-dark)}
+body.dark-mode .pillar-ring span{color:var(--gold)}
+.pillar-card h4{font-size:.98rem;font-weight:700;margin-bottom:.5rem;color:var(--green-dark)}
+body.dark-mode .pillar-card h4{color:var(--cream)}
+.pillar-card p{font-size:.8rem;color:var(--mid);line-height:1.6}
+
+/* ══════════════════════════════════
+   GALLERY — single-row carousel + lightbox
+══════════════════════════════════ */
+.gallery-carousel{position:relative;margin-top:2.8rem}
+.gallery-track{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:.4rem .2rem 1.6rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.gallery-track::-webkit-scrollbar{display:none}
+.gallery-item{position:relative;flex:0 0 clamp(230px,23vw,300px);height:clamp(300px,30vw,380px);border-radius:20px;overflow:hidden;cursor:pointer;scroll-snap-align:start;box-shadow:var(--shadow-sm);transition:box-shadow .4s ease}
+.gallery-item:hover{box-shadow:var(--shadow-md),0 0 0 1px rgba(212,175,55,.25)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.25,.8,.25,1);will-change:transform}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,42,24,0) 55%,rgba(6,26,15,.88) 100%);opacity:.55;transition:opacity .45s ease;z-index:1}
+.gallery-item:hover::before{opacity:.92}
+.gallery-item::after{content:'';position:absolute;inset:0;border-radius:20px;box-shadow:inset 0 0 0 0 rgba(212,175,55,0);transition:box-shadow .4s ease;z-index:1;pointer-events:none}
+.gallery-item:hover::after{box-shadow:inset 0 0 0 2px rgba(212,175,55,.55)}
+.gallery-cap{position:absolute;left:1.1rem;right:1.1rem;bottom:1rem;z-index:2;color:#fff;font-size:.9rem;font-weight:700;transform:translateY(8px);opacity:.92;transition:transform .4s cubic-bezier(.25,.8,.25,1)}
+.gallery-item:hover .gallery-cap{transform:translateY(0)}
+.gallery-cap span{display:block;font-size:.68rem;font-weight:600;color:var(--gold-light);letter-spacing:.08em;text-transform:uppercase;margin-top:.2rem}
+.gallery-zoom{position:absolute;top:1rem;right:1rem;z-index:2;width:38px;height:38px;border-radius:50%;background:rgba(251,248,241,.16);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.35);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;opacity:0;transform:scale(.6) rotate(-20deg);transition:opacity .35s ease,transform .35s cubic-bezier(.34,1.56,.64,1)}
+.gallery-item:hover .gallery-zoom{opacity:1;transform:scale(1) rotate(0)}
+.gallery-arrow{position:absolute;top:42%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;background:var(--green-dark);color:var(--gold-light);border:2px solid rgba(212,175,55,.4);display:flex;align-items:center;justify-content:center;font-size:1.05rem;cursor:pointer;z-index:6;box-shadow:0 8px 22px rgba(15,58,34,.28);transition:var(--tr)}
+.gallery-arrow:hover{background:var(--gold);color:var(--green-deep);border-color:var(--gold);transform:translateY(-50%) scale(1.08)}
+.gallery-arrow.prev{left:-14px}
+.gallery-arrow.next{right:-14px}
+body.dark-mode .gallery-arrow{background:var(--gold);color:var(--green-deep)}
+body.dark-mode .gallery-arrow:hover{background:var(--gold-light)}
+@media(max-width:720px){.gallery-arrow{width:42px;height:42px;font-size:.9rem}.gallery-arrow.prev{left:0}.gallery-arrow.next{right:0}}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s ease}
+.lightbox.open{opacity:1;pointer-events:all}
+.lightbox-bg{position:absolute;inset:0;background:rgba(6,20,13,.92);backdrop-filter:blur(6px)}
+.lightbox-figure{position:relative;z-index:1;max-width:min(1100px,90vw);max-height:86vh;width:100%;display:flex;flex-direction:column;align-items:center;transform:scale(.94) translateY(16px);opacity:0;transition:transform .45s cubic-bezier(.25,.8,.25,1),opacity .4s ease}
+.lightbox.open .lightbox-figure{transform:scale(1) translateY(0);opacity:1}
+.lightbox-img-wrap{width:100%;max-height:74vh;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);background:#000}
+.lightbox-img-wrap img{width:100%;height:100%;max-height:74vh;object-fit:contain;display:block}
+.lightbox-caption{margin-top:1.1rem;text-align:center;color:#fff}
+.lightbox-caption strong{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600}
+.lightbox-caption span{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-light);margin-top:.3rem}
+.lightbox-close{position:absolute;top:-1.2rem;right:-1.2rem;width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--green-deep);border:none;display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;box-shadow:0 8px 20px rgba(212,175,55,.4);transition:var(--tr)}
+.lightbox-close:hover{transform:rotate(90deg) scale(1.08)}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(251,248,241,.14);border:1px solid rgba(255,255,255,.3);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;transition:var(--tr);z-index:2}
+.lightbox-nav:hover{background:var(--gold);color:var(--green-deep);border-color:var(--gold)}
+.lightbox-prev{left:clamp(.5rem,3vw,2rem)}
+.lightbox-next{right:clamp(.5rem,3vw,2rem)}
+.lightbox-counter{position:absolute;top:-1.2rem;left:0;font-size:.72rem;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.6)}
+@media(max-width:640px){.lightbox-close{top:-3rem;right:0}.lightbox-counter{top:-3rem}}
+
+/* testimonials */
+.testi-track{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.5rem}
+.testi-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:2rem}
+.testi-stars{color:var(--gold);margin-bottom:1rem;font-size:.85rem}
+.testi-card p{font-size:.9rem;color:var(--mid);line-height:1.7;margin-bottom:1.3rem;font-style:italic}
+.testi-person{display:flex;align-items:center;gap:.8rem}
+.testi-avatar{width:42px;height:42px;border-radius:50%;background:var(--green-light);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem}
+.testi-person strong{display:block;font-size:.86rem;color:var(--green-dark)}
+body.dark-mode .testi-person strong{color:var(--cream)}
+.testi-person span{font-size:.74rem;color:var(--gray)}
+
+/* CTA band */
+.cta-band{position:relative;border-radius:28px;overflow:hidden;padding:clamp(2.5rem,5vw,4.5rem);text-align:center;background:linear-gradient(135deg,var(--green-dark),var(--green-deep));isolation:isolate}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 20% 20%,rgba(212,175,55,.18),transparent 60%);z-index:-1}
+.cta-band h2{color:#fff;font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:600;margin-bottom:1rem;max-width:640px;margin-left:auto;margin-right:auto}
+.cta-band p{color:rgba(255,255,255,.78);max-width:520px;margin:0 auto 2rem;font-size:.95rem;line-height:1.7}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* contact */
+.contact-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:2rem;align-items:stretch}
+.contact-card{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(150deg,var(--green-dark),var(--green-deep));border-radius:24px;border:1px solid rgba(212,175,55,.2);padding:2rem;display:flex;flex-direction:column;color:#fff}
+.contact-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 88% 8%,rgba(212,175,55,.25),transparent 60%),radial-gradient(ellipse 55% 45% at 4% 100%,rgba(212,175,55,.12),transparent 65%);z-index:-2}
+.contact-card::after{content:'\f6d7';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;right:-1.2rem;bottom:-2.2rem;font-size:11rem;color:rgba(212,175,55,.07);z-index:-1;line-height:1;transform:rotate(-8deg)}
+.contact-card .eyebrow{background:rgba(212,175,55,.15);color:var(--gold-light);border-color:rgba(212,175,55,.3)}
+.contact-card h3{font-size:clamp(1.2rem,1.8vw,1.6rem);font-weight:600;margin:.3rem 0 .6rem}
+.contact-card>p{color:rgba(255,255,255,.68);font-size:.86rem;line-height:1.6;margin-bottom:1.4rem}
+.contact-info-list{display:flex;flex-direction:column;gap:.8rem}
+.contact-info-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;transition:.2s ease}
+.contact-info-item:hover{background:rgba(212,175,55,.15);border-color:rgba(212,175,55,.4);transform:translateX(4px)}
+.ci-icon{width:38px;height:38px;border-radius:10px;background:rgba(212,175,55,.2);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:.9rem;flex-shrink:0}
+.ci-body strong{display:block;font-size:.85rem;font-weight:700;color:#fff}
+.ci-body span{font-size:.75rem;color:rgba(255,255,255,.55)}
+.contact-social{position:relative;z-index:1;display:flex;gap:.7rem;margin-top:auto;padding-top:1.6rem}
+.contact-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;transition:.2s ease;border:1px solid rgba(255,255,255,.15)}
+.contact-social a:hover{background:var(--gold);color:var(--green-deep);transform:translateY(-3px)}
+.contact-form-wrap{background:var(--white);border-radius:24px;border:1px solid var(--border);padding:2rem;display:flex;flex-direction:column}
+.contact-form-wrap h3{font-size:clamp(1.2rem,1.6vw,1.5rem);font-weight:600;margin-bottom:.3rem;color:var(--green-dark)}
+body.dark-mode .contact-form-wrap h3{color:var(--cream)}
+.contact-form-wrap>p{font-size:.83rem;color:var(--mid);margin-bottom:1.3rem}
+#contactForm{display:flex;flex-direction:column;flex:1}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.cf-group{display:flex;flex-direction:column;gap:.35rem;margin-bottom:.9rem}
+.cf-group label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mid)}
+.cf-group input,.cf-group select,.cf-group textarea{padding:.75rem 1rem;border-radius:12px;border:1.5px solid var(--border);background:var(--white);font-size:.87rem;transition:.2s ease;outline:none;font-family:inherit;color:var(--ink)}
+.cf-group input:focus,.cf-group select:focus,.cf-group textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.15)}
+.cf-group.cf-message{flex:1}
+.cf-group.cf-message textarea{flex:1;min-height:100px;height:100%}
+.cf-group textarea{min-height:100px;resize:vertical}
+.cf-submit{width:100%;padding:.9rem;background:linear-gradient(105deg,var(--gold),var(--gold-dark));color:var(--green-deep);border:none;border-radius:14px;font-size:.9rem;font-weight:800;cursor:pointer;transition:.25s ease;display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.3rem;min-height:50px;position:relative;overflow:hidden}
+.cf-submit:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(212,175,55,.35)}
+.cf-note{font-size:.72rem;color:var(--gray);margin-top:.7rem;text-align:center}
+
+
+/* sticky cta */
+.sticky-cta{position:fixed;bottom:1.8rem;right:1.8rem;z-index:800;display:flex;flex-direction:column;gap:.7rem;align-items:flex-end}
+.sticky-btn{width:52px;height:52px;border-radius:50%;border:none;position:relative;display:flex;align-items:center;justify-content:center;font-size:1.15rem;cursor:pointer;transition:var(--tr);box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.sticky-btn:hover{transform:scale(1.1)}
+.sticky-btn.whatsapp{background:linear-gradient(145deg,#2CE06A,#1DA851);color:#fff;opacity:0;pointer-events:none;transform:translateY(14px) scale(.7)}
+.sticky-btn.whatsapp.visible{opacity:1;pointer-events:all;transform:translateY(0) scale(1);animation:waGlow 3.2s ease-in-out infinite}
+.sticky-btn.whatsapp i{position:relative;z-index:1;animation:waAttention 6.5s ease-in-out infinite}
+.sticky-btn.whatsapp::before,.sticky-btn.whatsapp::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid #25D366;background:transparent;pointer-events:none;animation:waSonar 3.2s cubic-bezier(.25,.7,.3,1) infinite}
+.sticky-btn.whatsapp::after{animation-delay:1.6s}
+@keyframes waSonar{0%{transform:scale(.85);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+@keyframes waAttention{0%,86%,100%{transform:scale(1) rotate(0deg)}90%{transform:scale(1.16) rotate(-10deg)}93%{transform:scale(1.05) rotate(8deg)}96%{transform:scale(1.12) rotate(-4deg)}}
+@keyframes waGlow{0%,100%{box-shadow:0 6px 18px rgba(0,0,0,.2),0 0 0 rgba(37,211,102,.5)}50%{box-shadow:0 10px 26px rgba(0,0,0,.24),0 0 22px rgba(37,211,102,.65)}}
+.sticky-btn.totop{background:var(--green-dark);color:var(--gold-light);opacity:0;pointer-events:none;transform:translateY(14px) scale(.7)}
+.sticky-btn.totop.visible{opacity:1;pointer-events:all;transform:translateY(0) scale(1)}
+.sticky-label{font-size:.68rem;font-weight:700;background:var(--green-dark);color:#fff;padding:.25rem .7rem;border-radius:99px;opacity:0;transform:translateX(8px);transition:.2s ease;white-space:nowrap}
+.sticky-row{display:flex;align-items:center;gap:.6rem}
+.sticky-row:hover .sticky-label{opacity:1;transform:translateX(0)}
+.sticky-row.wa-row{position:relative}
+.wa-bubble{position:absolute;right:0;bottom:calc(100% + .9rem);width:230px;background:var(--white);color:var(--ink);border-radius:16px 16px 4px 16px;box-shadow:0 16px 36px rgba(0,0,0,.2);padding:.9rem 1.1rem;font-size:.8rem;line-height:1.55;z-index:801;opacity:0;transform:translateY(14px) scale(.9);transform-origin:bottom right;pointer-events:none;border:1px solid var(--border)}
+.wa-bubble.show{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
+.wa-bubble strong{display:block;font-size:.78rem;color:var(--green-dark);margin-bottom:.2rem}
+.wa-bubble p{margin:0}
+.wa-bubble-close{position:absolute;top:.3rem;right:.45rem;background:none;border:none;color:var(--gray);font-size:1rem;line-height:1;cursor:pointer;padding:.25rem}
+.wa-bubble::after{content:'';position:absolute;bottom:-7px;right:20px;width:14px;height:14px;background:var(--white);border-right:1px solid var(--border);border-bottom:1px solid var(--border);transform:rotate(45deg)}
+body.dark-mode .wa-bubble{background:var(--green-dark);color:var(--cream);border-color:rgba(255,255,255,.12)}
+body.dark-mode .wa-bubble strong{color:var(--gold-light)}
+body.dark-mode .wa-bubble::after{background:var(--green-dark);border-color:rgba(255,255,255,.12)}
+
+/* mobile drawer */
+.mobile-drawer{position:fixed;inset:0;z-index:980;pointer-events:none}
+.drawer-bg{position:absolute;inset:0;background:rgba(10,20,15,.55);opacity:0;transition:.3s ease;backdrop-filter:blur(2px)}
+.drawer-panel{position:absolute;right:0;top:0;bottom:0;width:min(340px,92vw);background:var(--white);padding:2rem 1.5rem;overflow-y:auto;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:-4px 0 40px rgba(0,0,0,.15)}
+.drawer-open .drawer-bg{opacity:1;pointer-events:all}
+.drawer-open .drawer-panel{transform:translateX(0);pointer-events:all}
+.drawer-close{position:absolute;top:1rem;right:1rem;width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.9rem;color:var(--ink);transition:var(--tr)}
+.drawer-close:hover{background:var(--gold);color:var(--green-deep);border-color:var(--gold)}
+.drawer-logo{display:flex;align-items:center;gap:.6rem;margin-bottom:2rem}
+.drawer-logo strong{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--green-dark)}
+.drawer-section{margin-bottom:1.4rem}
+.drawer-section h5{font-size:.65rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-bottom:.7rem;padding-left:.5rem}
+.drawer-link{display:flex;align-items:center;gap:.7rem;padding:.75rem .7rem;border-radius:12px;font-size:.88rem;font-weight:600;color:var(--ink);transition:.15s ease;min-height:48px}
+.drawer-link:hover{background:var(--green-light);color:var(--green-dark);padding-left:1rem}
+.drawer-link i{width:20px;text-align:center;color:var(--gold-dark)}
+
+/* footer */
+.site-footer{background:linear-gradient(160deg,var(--green-deep) 0%,#081c12 100%);color:rgba(255,255,255,.82);padding:clamp(1.68rem,3.36vw,2.52rem) 0 0;position:relative;overflow:hidden}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand{display:flex;align-items:center;gap:.6rem;margin-bottom:.56rem}
+.footer-brand strong{font-family:'Fraunces',serif;font-size:1.4rem;color:#fff}
+.footer-top>div>p{font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.6);max-width:300px}
+.footer-social{display:flex;gap:.6rem;margin-top:.67rem}
+.footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem;transition:.2s ease}
+.footer-social a:hover{background:var(--gold);color:var(--green-deep)}
+.footer-col h5{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-light);margin-bottom:.62rem}
+.footer-links{display:flex;flex-direction:column;gap:.36rem}
+.footer-link{font-size:.85rem;color:rgba(255,255,255,.65);transition:.2s ease}
+.footer-link:hover{color:var(--gold-light);padding-left:4px}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:.78rem 0;flex-wrap:wrap;gap:.8rem}
+.footer-copy{font-size:.78rem;color:rgba(255,255,255,.5)}
+.footer-copy a{color:rgba(255,255,255,.5)}
+.footer-bottom-links{display:flex;gap:1.2rem}
+.footer-bottom-links a{font-size:.78rem;color:rgba(255,255,255,.5)}
+.footer-bottom-links a:hover{color:var(--gold-light)}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media(max-width:1100px){
+  .nav-menu{display:none}
+  .hamburger{display:flex}
+  .intro-grid,.ops-wrap,.contact-layout{grid-template-columns:1fr}
+  .ops-img{position:relative;top:0}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .values-grid,.feat-grid,.product-grid,.pillars-grid,.testi-track{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .hero-content{padding-bottom:4rem}
+  .hero h1{max-width:100%}
+  .hero p{max-width:100%}
+  .hero-badges{gap:1.4rem}
+  .values-grid,.feat-grid,.product-grid,.pillars-grid,.testi-track{grid-template-columns:1fr 1fr}
+  .cf-row{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .values-grid,.feat-grid,.product-grid,.pillars-grid,.testi-track{grid-template-columns:1fr}
+  .stat-row{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:clamp(1.9rem,8vw,2.4rem)}
+}
+@media(prefers-reduced-motion:reduce){
+  .fade-up,.ticker-track,.scroll-dot::after{animation:none!important;opacity:1!important;transform:none!important}
+  .wheat-rule path{stroke-dashoffset:0!important}
+  .pillar-ring .fg{stroke-dashoffset:var(--offset)!important}
+  .scroll-progress{display:none!important}
+  .section-head::before,.deco-float{animation:none!important;opacity:.08!important}
+  .sec-title em{background-position:0 0!important}
+  .wave-divider svg{animation:none!important}
+  .sticky-btn.whatsapp,.sticky-btn.whatsapp i,.sticky-btn.whatsapp::before,.sticky-btn.whatsapp::after{animation:none!important}
+  .sticky-btn.whatsapp::before,.sticky-btn.whatsapp::after{display:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ═══════════════════ STICKY CTA ═══════════════════ -->
+<div class="sticky-cta">
+  <div class="sticky-row">
+    <div class="sticky-label">Back to Top</div>
+    <button class="sticky-btn totop" id="toTop"><i class="fas fa-arrow-up"></i></button>
+  </div>
+  <div class="sticky-row wa-row">
+    <div class="wa-bubble" id="waBubble">
+      <button class="wa-bubble-close" id="waBubbleClose" aria-label="Close">&times;</button>
+      <strong>Hasad Support</strong>
+      <p>👋 Questions about our products? Chat with us on WhatsApp.</p>
+    </div>
+    <div class="sticky-label">Chat on WhatsApp</div>
+    <a class="sticky-btn whatsapp" id="waBtn" href="https://wa.me/966500000000" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</div>
+
+<!-- ═══════════════════ MOBILE DRAWER ═══════════════════ -->
+<div class="mobile-drawer" id="drawer">
+  <div class="drawer-bg" onclick="closeDrawer()"></div>
+  <div class="drawer-panel">
+    <button class="drawer-close" onclick="closeDrawer()"><i class="fas fa-times"></i></button>
+    <div class="drawer-logo">
+      <!-- Replace logo.png with your company logo file (place it next to this HTML file) -->
+      <div class="nav-logo-mark"><img src="logo.png" alt="Hasad Logo"></div>
+      <strong>Hasad</strong>
+    </div>
+    <div class="drawer-section">
+      <h5>Products</h5>
+      <a class="drawer-link" href="#products"><i class="fas fa-drumstick-bite"></i> Fresh Chicken</a>
+      <a class="drawer-link" href="#products"><i class="fas fa-box-open"></i> Poultry Products</a>
+      <a class="drawer-link" href="#products"><i class="fas fa-egg"></i> Day-Old Chicks</a>
+      <a class="drawer-link" href="#products"><i class="fas fa-wheat-awn"></i> Feed Products</a>
+    </div>
+    <div class="drawer-section">
+      <h5>Farm Operations</h5>
+      <a class="drawer-link" href="#operations"><i class="fas fa-seedling"></i> Breeding &amp; Production</a>
+      <a class="drawer-link" href="#operations"><i class="fas fa-shield-halved"></i> Biosecurity</a>
+      <a class="drawer-link" href="#operations"><i class="fas fa-stethoscope"></i> Veterinary Care</a>
+    </div>
+    <div class="drawer-section">
+      <h5>Company</h5>
+      <a class="drawer-link" href="#about"><i class="fas fa-building"></i> About Hasad</a>
+      <a class="drawer-link" href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+      <a class="drawer-link" href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ NAVBAR ═══════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <!-- Replace logo.png with your company logo file (place it next to this HTML file) -->
+        <div class="nav-logo-mark"><img src="logo.png" alt="Hasad Logo"></div>
+      </a>
+
+      <div class="nav-menu">
+        <div class="nav-item">
+          <a class="nav-link" href="#products">Products <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-menu cols-4">
+            <div class="mega-grid">
+              <div class="mega-col">
+                <h5>Fresh</h5>
+                <a class="mega-link" href="#products"><div class="mega-link-icon"><i class="fas fa-drumstick-bite"></i></div><div class="mega-link-text"><strong>Fresh Chicken</strong><span>Whole birds &amp; cuts</span></div></a>
+              </div>
+              <div class="mega-col">
+                <h5>Value-Added</h5>
+                <a class="mega-link" href="#products"><div class="mega-link-icon"><i class="fas fa-box-open"></i></div><div class="mega-link-text"><strong>Poultry Products</strong><span>Marinated &amp; portioned</span></div></a>
+              </div>
+              <div class="mega-col">
+                <h5>Breeder Stock</h5>
+                <a class="mega-link" href="#products"><div class="mega-link-icon"><i class="fas fa-egg"></i></div><div class="mega-link-text"><strong>Day-Old Chicks</strong><span>Vaccinated, certified</span></div></a>
+              </div>
+              <div class="mega-col">
+                <h5>Nutrition</h5>
+                <a class="mega-link" href="#products"><div class="mega-link-icon"><i class="fas fa-wheat-awn"></i></div><div class="mega-link-text"><strong>Feed Products</strong><span>Balanced formulations</span></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#operations">Farm Operations <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-menu">
+            <div class="mega-grid">
+              <div class="mega-col">
+                <h5>On the Farm</h5>
+                <a class="mega-link" href="#operations"><div class="mega-link-icon"><i class="fas fa-seedling"></i></div><div class="mega-link-text"><strong>Breeding &amp; Production</strong><span>Climate-controlled housing</span></div></a>
+                <a class="mega-link" href="#operations"><div class="mega-link-icon"><i class="fas fa-clipboard-check"></i></div><div class="mega-link-text"><strong>Quality Control</strong><span>Hatch-to-dispatch checks</span></div></a>
+              </div>
+              <div class="mega-col">
+                <h5>Standards</h5>
+                <a class="mega-link" href="#operations"><div class="mega-link-icon"><i class="fas fa-shield-halved"></i></div><div class="mega-link-text"><strong>Biosecurity</strong><span>Controlled-access protocols</span></div></a>
+                <a class="mega-link" href="#operations"><div class="mega-link-icon"><i class="fas fa-stethoscope"></i></div><div class="mega-link-text"><strong>Veterinary Care</strong><span>Resident vet teams</span></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#about">Company <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-menu narrow">
+            <div class="mega-grid">
+              <div class="mega-col">
+                <h5>About Hasad</h5>
+                <a class="mega-link" href="#about"><div class="mega-link-icon"><i class="fas fa-building"></i></div><div class="mega-link-text"><strong>Vision &amp; Mission</strong><span>Who we are, what we stand for</span></div></a>
+                <a class="mega-link" href="#gallery"><div class="mega-link-icon"><i class="fas fa-images"></i></div><div class="mega-link-text"><strong>Gallery</strong><span>Farms, houses &amp; operations</span></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item"><a class="nav-link" href="#contact">Contact</a></div>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-solid-green btn-sm magnetic-btn" id="partnerBtn">Partner With Us</a>
+        <a href="#" class="icon-btn" id="langToggle" title="Switch to Arabic"><i class="fas fa-globe"></i> <span>AR</span></a>
+        <button class="icon-btn" id="themeToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamBtn" onclick="openDrawer()"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg-wrap" id="heroSlideshow">
+    <img class="hero-bg active" src="https://images.pexels.com/photos/35877057/pexels-photo-35877057.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hasad poultry farm barn interior">
+    <img class="hero-bg" src="https://images.pexels.com/photos/35877061/pexels-photo-35877061.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Wide view of Hasad poultry housing">
+    <img class="hero-bg" src="https://images.pexels.com/photos/37150872/pexels-photo-37150872.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Close-up of a chick in the Hasad hatchery">
+    <img class="hero-bg" src="https://images.pexels.com/photos/32840079/pexels-photo-32840079.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Large-scale indoor poultry farm equipment and housing">
+    <img class="hero-bg" src="https://images.pexels.com/photos/37126259/pexels-photo-37126259.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Egg production facility at Hasad">
+    <img class="hero-bg" src="https://images.pexels.com/photos/36660076/pexels-photo-36660076.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hen in a sunny free-range pasture">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-2"></div>
+  <div class="hero-content container">
+    <h1>Growing Quality,<br><em>Delivering Trust</em></h1>
+    <p>Hasad raises, processes and delivers premium poultry across the Kingdom — with rigorous biosecurity, resident veterinary care and a sustainable approach to farming that puts the welfare of every bird first.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Explore Our Products</a>
+      <a href="#contact" class="btn btn-outline">Become a Partner</a>
+    </div>
+    <div class="hero-badges">
+      <div><div class="hbadge-num" data-count="12">0</div><div class="hbadge-label">Integrated Farms</div></div>
+      <div><div class="hbadge-num" data-count="2.4" data-suffix="M+">0</div><div class="hbadge-label">Birds Raised Yearly</div></div>
+      <div><div class="hbadge-num" data-count="98.5" data-suffix="%">0</div><div class="hbadge-label">Biosecurity Score</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="scroll-dot"></div></div>
+  <div class="wave-divider">
+    <svg viewBox="0 0 2400 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C200,110 400,10 600,60 C800,110 1000,10 1200,60 C1400,110 1600,10 1800,60 C2000,110 2200,10 2400,60 L2400,120 L0,120 Z"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ═══════════════════ TICKER ═══════════════════ -->
+<div class="ticker-bar">
+  <div class="ticker-track" id="ticker">
+    <span class="ticker-item"><i class="fas fa-shield-halved"></i> Biosecurity Status: All Farms Clear</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-egg"></i> Daily Hatchery Output: 40,000+ Chicks</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-truck"></i> Fresh Delivery: 6 Regions, Same-Day</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-leaf"></i> Zero Antibiotic-Residue Policy</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-award"></i> ISO &amp; Saudi GSO Certified</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-stethoscope"></i> 24/7 Resident Veterinary Teams</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-solar-panel"></i> Solar-Assisted Poultry Houses</span><span class="ticker-sep">|</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item"><i class="fas fa-shield-halved"></i> Biosecurity Status: All Farms Clear</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-egg"></i> Daily Hatchery Output: 40,000+ Chicks</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-truck"></i> Fresh Delivery: 6 Regions, Same-Day</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-leaf"></i> Zero Antibiotic-Residue Policy</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-award"></i> ISO &amp; Saudi GSO Certified</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-stethoscope"></i> 24/7 Resident Veterinary Teams</span><span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-solar-panel"></i> Solar-Assisted Poultry Houses</span><span class="ticker-sep">|</span>
+  </div>
+</div>
+
+<!-- ═══════════════════ ABOUT ═══════════════════ -->
+<section class="section about-section" id="about">
+  <i class="fas fa-wheat-awn deco-float" style="top:10%;right:5%;font-size:2.6rem"></i>
+  <div class="container">
+    <div class="intro-grid">
+      <div class="fade-up">
+        <span class="eyebrow"><i class="fas fa-seedling"></i> About Hasad</span>
+        <h2 class="sec-title">A harvest of quality, <em>raised right</em></h2>
+        <svg class="wheat-rule" viewBox="0 0 74 22"><path d="M4 20 Q 20 6 70 4 M18 14 l-6-6 M18 14 l2-8 M30 10 l-6-6 M30 10 l2-8 M42 7 l-6-6 M42 7 l2-8"/></svg>
+        <p class="sec-sub">Hasad ("harvest" in Arabic) began with a simple belief: that great poultry starts long before it reaches a plate — with healthy breeding stock, disciplined biosecurity, and people who treat every flock like it's the only one. Today we operate an integrated network of farms, hatcheries and processing facilities across the Kingdom, supplying fresh chicken, poultry products, day-old chicks and feed to retailers, restaurants and growers who expect nothing less than consistent, verifiable quality.</p>
+        <div class="stat-row">
+          <div class="stat-item"><div class="stat-num" data-count="12">0</div><div class="stat-label">Integrated farms &amp; hatcheries</div></div>
+          <div class="stat-item"><div class="stat-num" data-count="2.4" data-suffix="M+">0</div><div class="stat-label">Birds raised every year</div></div>
+          <div class="stat-item"><div class="stat-num" data-count="15000" data-suffix="+" data-format="comma">0</div><div class="stat-label">Partner households &amp; businesses</div></div>
+          <div class="stat-item"><div class="stat-num" data-count="0">0</div><div class="stat-label">Antibiotic residues, by policy</div></div>
+        </div>
+      </div>
+      <div class="fade-up">
+        <div class="intro-img-wrap">
+          <img src="https://images.pexels.com/photos/27083552/pexels-photo-27083552.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Flock of chickens inside a modern Hasad poultry facility">
+          <div class="intro-badge"><i class="fas fa-award"></i><div><strong>GSO &amp; ISO 22000</strong><span>Certified food-safety systems</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision / Mission / Values -->
+<section class="section" id="vision">
+  <div class="container">
+    <div class="section-head center" style="margin-left:auto;margin-right:auto">
+      <span class="eyebrow"><i class="fas fa-compass"></i> Vision &amp; Mission</span>
+      <h2 class="sec-title">What drives every flock we raise</h2>
+      <svg class="wheat-rule" viewBox="0 0 74 22" style="margin-left:auto;margin-right:auto"><path d="M4 20 Q 20 6 70 4 M18 14 l-6-6 M18 14 l2-8 M30 10 l-6-6 M30 10 l2-8 M42 7 l-6-6 M42 7 l2-8"/></svg>
+    </div>
+    <div class="values-grid" style="grid-template-columns:1fr 1fr;margin-bottom:2.5rem">
+      <div class="value-card fade-up">
+        <div class="value-icon"><i class="fas fa-eye"></i></div>
+        <h4>Our Vision</h4>
+        <p>To be the region's most trusted name in poultry — feeding families and partners with quality that's raised the right way, from hatch to table.</p>
+      </div>
+      <div class="value-card fade-up">
+        <div class="value-icon"><i class="fas fa-flag"></i></div>
+        <h4>Our Mission</h4>
+        <p>We raise, process and deliver poultry with uncompromising care for bird welfare, food safety and the land that sustains us — building a company our communities can rely on for generations.</p>
+      </div>
+       <div class="value-card fade-up">
+        <div class="value-icon"><i class="fas fa-gem"></i></div>
+        <h4>Quality First</h4>
+        <p>Every batch is tested and traced — quality isn't a claim, it's a documented standard.</p>
+      </div>
+       <div class="value-card fade-up">
+        <div class="value-icon"><i class="fas fa-handshake"></i></div>
+        <h4>Integrity &amp; Trust</h4>
+        <p>We say what we do and do what we say, with partners, regulators and customers alike.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Why Choose Hasad -->
+<section class="section pillars-section" id="why">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fas fa-star"></i> Why Choose Hasad</span>
+      <h2 class="sec-title">Quality you can <em>verify</em>, not just taste</h2>
+      <svg class="wheat-rule" viewBox="0 0 74 22" style="margin-left:auto;margin-right:auto"><path d="M4 20 Q 20 6 70 4 M18 14 l-6-6 M18 14 l2-8 M30 10 l-6-6 M30 10 l2-8 M42 7 l-6-6 M42 7 l2-8"/></svg>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card fade-up"><div class="feat-icon"><i class="fas fa-shield-halved"></i></div><h4>Strict Biosecurity</h4><p>Controlled access and sanitation at every gate.</p></div>
+      <div class="feat-card fade-up"><div class="feat-icon"><i class="fas fa-stethoscope"></i></div><h4>Veterinary-Led Care</h4><p>Resident vets monitor every flock, every day.</p></div>
+      <div class="feat-card fade-up"><div class="feat-icon"><i class="fas fa-truck-fast"></i></div><h4>Cold-Chain Delivery</h4><p>Farm-fresh to shelf without a break in temperature.</p></div>
+      <div class="feat-card fade-up"><div class="feat-icon"><i class="fas fa-leaf"></i></div><h4>Sustainable by Design</h4><p>Solar, water recycling and closed-loop waste use.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ PRODUCTS ═══════════════════ -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="fas fa-box"></i> Our Products</span>
+      <h2 class="sec-title">From hatchery to <em>your table</em></h2>
+      <svg class="wheat-rule" viewBox="0 0 74 22"><path d="M4 20 Q 20 6 70 4 M18 14 l-6-6 M18 14 l2-8 M30 10 l-6-6 M30 10 l2-8 M42 7 l-6-6 M42 7 l2-8"/></svg>
+      <p class="sec-sub">A full range built for retailers, restaurants and growers — each product backed by the same biosecurity and quality standard.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card fade-up">
+        <div class="product-img"><img src="https://images.pexels.com/photos/26625882/pexels-photo-26625882.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fresh whole chicken and cuts"></div>
+        <div class="product-body">
+          <span class="product-tag">Fresh</span>
+          <h4>Fresh Chicken</h4>
+          <p>Whole birds and portioned cuts, hygienically processed and chilled same-day for maximum freshness.</p>
+          <div class="product-specs"><span class="spec-chip">Whole &amp; Cuts</span><span class="spec-chip">Same-Day Chill</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img"><img src="https://images.pexels.com/photos/32840074/pexels-photo-32840074.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Poultry products ready for retail"></div>
+        <div class="product-body">
+          <span class="product-tag">Value-Added</span>
+          <h4>Poultry Products</h4>
+          <p>Marinated cuts, portioned trays and retail-ready packs designed for kitchens and shelves alike.</p>
+          <div class="product-specs"><span class="spec-chip">Marinated</span><span class="spec-chip">Retail-Ready</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img"><img src="https://images.pexels.com/photos/12995533/pexels-photo-12995533.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Day-old chicks under warming lamps at Hasad hatchery"></div>
+        <div class="product-body">
+          <span class="product-tag">Breeder Stock</span>
+          <h4>Day-Old Chicks</h4>
+          <p>Genetically selected, fully vaccinated chicks supplied to commercial growers across the Kingdom.</p>
+          <div class="product-specs"><span class="spec-chip">Vaccinated</span><span class="spec-chip">Traceable</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img"><img src="https://images.pexels.com/photos/16667124/pexels-photo-16667124.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Poultry feeding and feed products at Hasad farms"></div>
+        <div class="product-body">
+          <span class="product-tag">Nutrition</span>
+          <h4>Feed Products</h4>
+          <p>Balanced, in-house formulated feed engineered for healthy growth at every life stage.</p>
+          <div class="product-specs"><span class="spec-chip">Balanced Formula</span><span class="spec-chip">In-House Milled</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FARM OPERATIONS ═══════════════════ -->
+<section class="section pillars-section" id="operations">
+  <div class="container">
+    <div class="ops-wrap">
+      <div class="ops-img fade-up">
+        <img src="https://images.pexels.com/photos/29863325/pexels-photo-29863325.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Organized poultry farm interior showing rows of housing">
+      </div>
+      <div>
+        <span class="eyebrow"><i class="fas fa-industry"></i> Farm Operations</span>
+        <h2 class="sec-title">Discipline at every stage of <em>growth</em></h2>
+        <svg class="wheat-rule" viewBox="0 0 74 22"><path d="M4 20 Q 20 6 70 4 M18 14 l-6-6 M18 14 l2-8 M30 10 l-6-6 M30 10 l2-8 M42 7 l-6-6 M42 7 l2-8"/></svg>
+        <div class="ops-steps">
+          <div class="op-step fade-up">
+            <div class="op-num">1</div>
+            <div class="op-body"><strong>Breeding &amp; Production</strong><p>Climate-controlled houses, selective breeding and a closed-flock system that keeps every generation healthy and consistent.</p></div>
+          </div>
+          <div class="op-step fade-up">
+            <div class="op-num">2</div>
+            <div class="op-body"><strong>Quality Control</strong><p>Multi-point inspection from hatch to dispatch, with cold-chain monitoring the whole way to delivery.</p></div>
+          </div>
+          <div class="op-step fade-up">
+            <div class="op-num">3</div>
+            <div class="op-body"><strong>Biosecurity Standards</strong><p>Controlled site access, sanitation protocols and continuous disease surveillance across every farm.</p></div>
+          </div>
+          <div class="op-step fade-up">
+            <div class="op-num">4</div>
+            <div class="op-body"><strong>Veterinary Care</strong><p>Resident veterinary teams run scheduled health checks and vaccination programs for every flock.</p></div>
+          </div>
+          <div class="op-step fade-up">
+            <div class="op-num">5</div>
+            <div class="op-body"><strong>Sustainable Farming</strong><p>Water recycling, solar-assisted housing and a waste-to-fertilizer program that closes the loop.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Food safety / QA / Environment / Customer satisfaction pillars -->
+<section class="section" id="commitments">
+  <i class="fas fa-leaf deco-float d2" style="top:14%;left:4%;font-size:2.1rem"></i>
+  <i class="fas fa-wheat-awn deco-float d3" style="bottom:8%;right:5%;font-size:2.3rem"></i>
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fas fa-shield-heart"></i> Our Commitments</span>
+      <h2 class="sec-title">Standards we hold ourselves to</h2>
+      <svg class="wheat-rule" viewBox="0 0 74 22" style="margin-left:auto;margin-right:auto"><path d="M4 20 Q 20 6 70 4 M18 14 l-6-6 M18 14 l2-8 M30 10 l-6-6 M30 10 l2-8 M42 7 l-6-6 M42 7 l2-8"/></svg>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card fade-up">
+        <div class="pillar-ring"><svg viewBox="0 0 64 64"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--offset:5"/></svg><span data-count="99" data-suffix="%">0%</span></div>
+        <h4>Food Safety</h4>
+        <p>HACCP-based controls and full batch traceability from farm to shelf.</p>
+      </div>
+      <div class="pillar-card fade-up">
+        <div class="pillar-ring"><svg viewBox="0 0 64 64"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--offset:15"/></svg><span data-count="98" data-suffix="%">0%</span></div>
+        <h4>Quality Assurance</h4>
+        <p>Independent audits and lab testing at every production milestone.</p>
+      </div>
+      <div class="pillar-card fade-up">
+        <div class="pillar-ring"><svg viewBox="0 0 64 64"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--offset:34"/></svg><span data-count="92" data-suffix="%">0%</span></div>
+        <h4>Environmental Responsibility</h4>
+        <p>Solar-assisted housing and water recycling across our farm network.</p>
+      </div>
+      <div class="pillar-card fade-up">
+        <div class="pillar-ring"><svg viewBox="0 0 64 64"><circle class="bg" cx="32" cy="32" r="27"/><circle class="fg" cx="32" cy="32" r="27" style="--offset:8"/></svg><span data-count="97" data-suffix="%">0%</span></div>
+        <h4>Customer Satisfaction</h4>
+        <p>Repeat partnerships built on consistent, on-time, verifiable delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ GALLERY ═══════════════════ -->
+<section class="section pillars-section" id="gallery">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fas fa-camera"></i> Gallery</span>
+      <h2 class="sec-title">A look inside our farms</h2>
+      <svg class="wheat-rule" viewBox="0 0 74 22" style="margin-left:auto;margin-right:auto"><path d="M4 20 Q 20 6 70 4 M18 14 l-6-6 M18 14 l2-8 M30 10 l-6-6 M30 10 l2-8 M42 7 l-6-6 M42 7 l2-8"/></svg>
+    </div>
+    <div class="gallery-carousel">
+      <button class="gallery-arrow prev" id="galPrev" aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+      <button class="gallery-arrow next" id="galNext" aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+      <div class="gallery-track" id="galleryGrid">
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/35877061/pexels-photo-35877061.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Poultry Houses" data-cat="Facilities">
+        <img src="https://images.pexels.com/photos/35877061/pexels-photo-35877061.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Wide view of Hasad poultry housing" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Poultry Houses<span>Facilities</span></div>
+      </div>
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/37150872/pexels-photo-37150872.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Hatchery" data-cat="Day-Old Chicks">
+        <img src="https://images.pexels.com/photos/37150872/pexels-photo-37150872.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Close-up of a chick in the Hasad hatchery" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Hatchery<span>Day-Old Chicks</span></div>
+      </div>
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/35877071/pexels-photo-35877071.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Livestock" data-cat="Operations">
+        <img src="https://images.pexels.com/photos/35877071/pexels-photo-35877071.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rooster inside a Hasad poultry farm" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Livestock<span>Operations</span></div>
+      </div>
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/32840079/pexels-photo-32840079.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Farm Equipment" data-cat="Modern Infrastructure">
+        <img src="https://images.pexels.com/photos/32840079/pexels-photo-32840079.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Large-scale indoor poultry farm equipment and housing" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Farm Equipment<span>Modern Infrastructure</span></div>
+      </div>
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/37126259/pexels-photo-37126259.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Egg Production" data-cat="Products">
+        <img src="https://images.pexels.com/photos/37126259/pexels-photo-37126259.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Egg laying facility at Hasad" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Egg Production<span>Products</span></div>
+      </div>
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/4200087/pexels-photo-4200087.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Flock Care" data-cat="Operations">
+        <img src="https://images.pexels.com/photos/4200087/pexels-photo-4200087.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hens indoors at a Hasad farm" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Flock Care<span>Operations</span></div>
+      </div>
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/16580501/pexels-photo-16580501.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Free-Roam Areas" data-cat="Facilities">
+        <img src="https://images.pexels.com/photos/16580501/pexels-photo-16580501.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Portrait of a hen on the farm" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Free-Roam Areas<span>Facilities</span></div>
+      </div>
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/27083552/pexels-photo-27083552.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Modern Facility" data-cat="Infrastructure">
+        <img src="https://images.pexels.com/photos/27083552/pexels-photo-27083552.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Large flock inside a modern poultry farm facility" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Modern Facility<span>Infrastructure</span></div>
+      </div>
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/32840078/pexels-photo-32840078.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Feeding Systems" data-cat="Operations">
+        <img src="https://images.pexels.com/photos/32840078/pexels-photo-32840078.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Indoor feeding stations at a Hasad poultry farm" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Feeding Systems<span>Operations</span></div>
+      </div>
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/36660076/pexels-photo-36660076.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Free-Range Pasture" data-cat="Facilities">
+        <img src="https://images.pexels.com/photos/36660076/pexels-photo-36660076.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hen in a sunny free-range pasture" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Free-Range Pasture<span>Facilities</span></div>
+      </div>
+      <div class="gallery-item fade-up" data-full="https://images.pexels.com/photos/12995535/pexels-photo-12995535.jpeg?auto=compress&cs=tinysrgb&w=1600" data-title="Feeding Stations" data-cat="Operations">
+        <img src="https://images.pexels.com/photos/12995535/pexels-photo-12995535.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Wide-angle view of a chicken coop with feeding stations" loading="lazy">
+        <div class="gallery-zoom"><i class="fas fa-expand"></i></div>
+        <div class="gallery-cap">Feeding Stations<span>Operations</span></div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ GALLERY LIGHTBOX ═══════════════════ -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-bg" onclick="closeLightbox()"></div>
+  <div class="lightbox-figure">
+    <div class="lightbox-counter" id="lbCounter">1 / 11</div>
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+    <button class="lightbox-nav lightbox-prev" onclick="stepLightbox(-1)"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-nav lightbox-next" onclick="stepLightbox(1)"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-img-wrap"><img id="lbImg" src="" alt=""></div>
+    <div class="lightbox-caption"><strong id="lbTitle"></strong><span id="lbCat"></span></div>
+  </div>
+</div>
+
+<!-- Testimonials -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fas fa-quote-left"></i> Trusted By Partners</span>
+      <h2 class="sec-title">What our partners say</h2>
+      <svg class="wheat-rule" viewBox="0 0 74 22" style="margin-left:auto;margin-right:auto"><path d="M4 20 Q 20 6 70 4 M18 14 l-6-6 M18 14 l2-8 M30 10 l-6-6 M30 10 l2-8 M42 7 l-6-6 M42 7 l2-8"/></svg>
+    </div>
+    <div class="testi-track">
+      <div class="testi-card fade-up">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Hasad's cold-chain delivery has never let us down — consistent freshness across every branch."</p>
+        <div class="testi-person"><div class="testi-avatar">RM</div><div><strong>Retail Chain Manager</strong><span>Riyadh</span></div></div>
+      </div>
+      <div class="testi-card fade-up">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"The day-old chicks arrive strong and healthy every time — our mortality rates have never been lower."</p>
+        <div class="testi-person"><div class="testi-avatar">CG</div><div><strong>Commercial Grower</strong><span>Al-Kharj</span></div></div>
+      </div>
+      <div class="testi-card fade-up">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Their biosecurity documentation made our audit process effortless. A genuinely transparent supplier."</p>
+        <div class="testi-person"><div class="testi-avatar">HG</div><div><strong>Restaurant Group Buyer</strong><span>Jeddah</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<section class="section" style="padding-top:0;position:relative">
+  <i class="fas fa-wheat-awn deco-float" style="top:12%;left:6%;font-size:2.2rem;opacity:.22"></i>
+  <div class="container">
+    <div class="cta-band fade-up">
+      <h2>Ready to grow with Hasad?</h2>
+      <p>Whether you're a retailer, restaurant group or commercial grower, our team is ready to build a supply partnership around your needs.</p>
+      <div class="cta-btns">
+        <a href="#contact" class="btn btn-primary"><i class="fas fa-handshake"></i> Become a Partner</a>
+        <a href="#products" class="btn btn-outline">View Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<section class="section" id="contact">
+  <i class="fas fa-leaf deco-float d2" style="top:8%;right:4%;font-size:2rem"></i>
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fas fa-envelope"></i> Contact Us</span>
+      <h2 class="sec-title">Let's talk about your <em>supply</em></h2>
+      <svg class="wheat-rule" viewBox="0 0 74 22" style="margin-left:auto;margin-right:auto"><path d="M4 20 Q 20 6 70 4 M18 14 l-6-6 M18 14 l2-8 M30 10 l-6-6 M30 10 l2-8 M42 7 l-6-6 M42 7 l2-8"/></svg>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-card fade-up">
+        <span class="eyebrow"><i class="fas fa-headset"></i> Get in Touch</span>
+        <h3>We'd love to hear from you</h3>
+        <p>Reach our team directly, or visit one of our farm offices across the Kingdom.</p>
+        <div class="contact-info-list">
+          <div class="contact-info-item"><div class="ci-icon"><i class="fas fa-phone"></i></div><div class="ci-body"><strong>+966 11 234 5678</strong><span>Sales &amp; Partnerships</span></div></div>
+          <div class="contact-info-item"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div class="ci-body"><strong>info@hasad-poultry.sa</strong><span>General Inquiries</span></div></div>
+          <div class="contact-info-item"><div class="ci-icon"><i class="fas fa-location-dot"></i></div><div class="ci-body"><strong>Riyadh, Saudi Arabia</strong><span>Head Office</span></div></div>
+          <div class="contact-info-item"><div class="ci-icon"><i class="fab fa-whatsapp"></i></div><div class="ci-body"><strong>+966 50 000 0000</strong><span>WhatsApp Support</span></div></div>
+        </div>
+        <div class="contact-social">
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="contact-form-wrap fade-up">
+        <h3>Send us a message</h3>
+        <p>Tell us what you need and our team will respond within one business day.</p>
+        <form id="contactForm">
+          <div class="cf-row">
+            <div class="cf-group"><label>Full Name</label><input type="text" placeholder="Your name" required></div>
+            <div class="cf-group"><label>Phone</label><input type="tel" placeholder="+966 5X XXX XXXX"></div>
+          </div>
+          <div class="cf-row">
+            <div class="cf-group"><label>Email</label><input type="email" placeholder="you@company.com" required></div>
+            <div class="cf-group"><label>I'm Interested In</label>
+              <select>
+                <option>Fresh Chicken</option>
+                <option>Poultry Products</option>
+                <option>Day-Old Chicks</option>
+                <option>Feed Products</option>
+                <option>Partnership / Franchise</option>
+                <option>Investor Relations</option>
+              </select>
+            </div>
+          </div>
+          <div class="cf-group cf-message"><label>Message</label><textarea placeholder="Tell us about your requirement..." required></textarea></div>
+          <button type="submit" class="cf-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <div class="cf-note">By submitting, you agree to be contacted by our team regarding your inquiry.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <div class="nav-logo-mark"><img src="logo.png" alt="Hasad Logo"></div>
+          <strong>Hasad</strong>
+        </div>
+        <p>A premium poultry farming company delivering fresh chicken, poultry products, day-old chicks and feed — grown with quality and trust at the core.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <div class="footer-links">
+          <a href="#products" class="footer-link">Fresh Chicken</a>
+          <a href="#products" class="footer-link">Poultry Products</a>
+          <a href="#products" class="footer-link">Day-Old Chicks</a>
+          <a href="#products" class="footer-link">Feed Products</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <div class="footer-links">
+          <a href="#about" class="footer-link">About Hasad</a>
+          <a href="#operations" class="footer-link">Farm Operations</a>
+          <a href="#gallery" class="footer-link">Gallery</a>
+          <a href="#contact" class="footer-link">Partner With Us</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-links">
+          <a href="tel:+966112345678" class="footer-link">+966 11 234 5678</a>
+          <a href="mailto:info@hasad-poultry.sa" class="footer-link">info@hasad-poultry.sa</a>
+          <a href="#contact" class="footer-link">Riyadh, Saudi Arabia</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Hasad Poultry Farming Co. All rights reserved. &nbsp;·&nbsp; <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Use</a></div>
+      <div class="footer-bottom-links"><a href="#">Sitemap</a><a href="#">Accessibility</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  const nb = document.getElementById('navbar');
+  const toTop = document.getElementById('toTop');
+  const waBtn = document.getElementById('waBtn');
+  const aboutEl = document.getElementById('about');
+
+  /* hero background slideshow — crossfade + Ken Burns zoom */
+  (function heroSlideshow(){
+    const wrap = document.getElementById('heroSlideshow');
+    if(!wrap) return;
+    const slides = Array.from(wrap.querySelectorAll('.hero-bg'));
+    if(slides.length < 2) return;
+    let current = 0;
+    const INTERVAL = 5200;
+
+    function goTo(next){
+      const prev = slides[current];
+      const el = slides[next];
+      // restart the Ken Burns animation cleanly
+      el.classList.remove('active');
+      void el.offsetWidth; // force reflow
+      el.classList.add('active');
+      prev.classList.remove('active');
+      current = next;
+    }
+
+    setInterval(() => {
+      const next = (current + 1) % slides.length;
+      goTo(next);
+    }, INTERVAL);
+  })();
+
+  window.addEventListener('scroll', () => {
+    const sy = window.scrollY;
+    nb.classList.toggle('floating', sy > 60);
+    nb.classList.toggle('scrolled-logo', sy > 30);
+  }, {passive:true});
+
+  /* WhatsApp greeting bubble — pops up once, shortly after the button appears */
+  const waBubble = document.getElementById('waBubble');
+  const waBubbleClose = document.getElementById('waBubbleClose');
+  let waBubbleShown = false;
+  let waAutoHideTimer = null;
+  function showWaBubble(){
+    if(waBubbleShown || !waBubble) return;
+    waBubbleShown = true;
+    waBubble.classList.add('show');
+    waAutoHideTimer = setTimeout(hideWaBubble, 7000);
+  }
+  function hideWaBubble(){
+    if(!waBubble) return;
+    waBubble.classList.remove('show');
+    clearTimeout(waAutoHideTimer);
+  }
+  if(waBubbleClose) waBubbleClose.addEventListener('click', e => { e.preventDefault(); hideWaBubble(); });
+  if(waBtn) waBtn.addEventListener('click', hideWaBubble);
+
+  /* sticky WhatsApp + back-to-top only appear once the About section has been passed */
+  function updateStickyVisibility(){
+    if(!aboutEl) return;
+    const threshold = aboutEl.offsetTop + aboutEl.offsetHeight * 0.4;
+    const show = window.scrollY > threshold;
+    if(toTop) toTop.classList.toggle('visible', show);
+    if(waBtn){
+      const wasVisible = waBtn.classList.contains('visible');
+      waBtn.classList.toggle('visible', show);
+      if(show && !wasVisible) setTimeout(showWaBubble, 1200);
+    }
+  }
+  window.addEventListener('scroll', updateStickyVisibility, {passive:true});
+  window.addEventListener('resize', updateStickyVisibility);
+  updateStickyVisibility();
+
+  toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  window.openDrawer = () => { document.getElementById('drawer').classList.add('drawer-open'); document.body.style.overflow='hidden'; };
+  window.closeDrawer = () => { document.getElementById('drawer').classList.remove('drawer-open'); document.body.style.overflow=''; };
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeDrawer(); });
+
+  /* dark mode */
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle.querySelector('i');
+  const setIcon = () => { themeIcon.className = document.body.classList.contains('dark-mode') ? 'fas fa-sun' : 'fas fa-moon'; };
+  setIcon();
+  themeToggle.addEventListener('click', e => { e.stopPropagation(); document.body.classList.toggle('dark-mode'); setIcon(); });
+
+  /* click ripple — soft ink spreads from the click point on every button */
+  document.querySelectorAll('.btn, .cf-submit').forEach(btn => {
+    btn.addEventListener('click', function(e){
+      const r = btn.getBoundingClientRect();
+      const size = Math.max(r.width, r.height) * 2;
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple';
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = (e.clientX - r.left - size/2) + 'px';
+      ripple.style.top = (e.clientY - r.top - size/2) + 'px';
+      btn.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  });
+
+  /* magnetic button */
+  const mag = document.querySelector('.magnetic-btn');
+  if(mag && window.matchMedia('(hover:hover)').matches){
+    mag.addEventListener('mousemove', e => {
+      const r = mag.getBoundingClientRect();
+      mag.style.transform = `translate(${(e.clientX-r.left-r.width/2)*.15}px,${(e.clientY-r.top-r.height/2)*.15}px)`;
+    });
+    mag.addEventListener('mouseleave', () => mag.style.transform='');
+  }
+
+  /* active nav link on scroll */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  function setActive(){
+    let current = '';
+    sections.forEach(s => { if(window.scrollY >= s.offsetTop - 110) current = s.id; });
+    navLinks.forEach(l => l.classList.toggle('active-section', l.getAttribute('href') === '#'+current));
+  }
+  window.addEventListener('scroll', setActive, {passive:true});
+  setActive();
+
+  /* smooth anchor scroll + close drawer */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const h = a.getAttribute('href');
+      if(!h || h==='#') return;
+      const t = document.querySelector(h);
+      if(t){ e.preventDefault(); closeDrawer(); setTimeout(()=>t.scrollIntoView({behavior:'smooth',block:'start'}),50); }
+    });
+  });
+
+  /* counters */
+  function animateCount(el){
+    const target = parseFloat(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    const useComma = el.dataset.format === 'comma';
+    const isDecimal = String(target).includes('.');
+    let cur = 0;
+    const steps = 60;
+    const inc = target/steps;
+    let i = 0;
+    const timer = setInterval(() => {
+      i++; cur += inc;
+      if(i >= steps){ cur = target; clearInterval(timer); }
+      const shown = isDecimal ? cur.toFixed(1) : (useComma ? Math.round(cur).toLocaleString('en-US') : Math.round(cur));
+      el.textContent = shown + suffix;
+      if(i >= steps){
+        el.classList.add('count-glow');
+        setTimeout(() => el.classList.remove('count-glow'), 950);
+      }
+    }, 25);
+  }
+  const counted = new WeakSet();
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if(en.isIntersecting && !counted.has(en.target)){
+        counted.add(en.target);
+        animateCount(en.target);
+      }
+    });
+  }, {threshold:.4});
+  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+  /* contact form (demo) */
+  const cf = document.getElementById('contactForm');
+  if(cf){
+    cf.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = cf.querySelector('.cf-submit');
+      const original = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-check"></i> Message Sent';
+      setTimeout(() => { btn.innerHTML = original; cf.reset(); }, 2200);
+    });
+  }
+
+  /* ══════════════════════════════════
+     GSAP + SCROLLTRIGGER — every section below the hero
+  ══════════════════════════════════ */
+  window.addEventListener('load', () => {
+    const revealFallback = () => {
+      document.querySelectorAll('.fade-up').forEach(el => { el.style.opacity='1'; el.style.transform='none'; });
+      document.querySelectorAll('.wheat-rule path').forEach(p => { p.style.strokeDashoffset='0'; });
+      document.querySelectorAll('.pillar-ring .fg').forEach(fg => { fg.style.strokeDashoffset = fg.style.getPropertyValue('--offset'); });
+    };
+
+    if(typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined'){ revealFallback(); return; }
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ revealFallback(); return; }
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.defaults({ease:'power3.out'});
+
+    /* wraps every word of an element's text (including inside nested tags like <em>)
+       in a mask span, so it can be revealed one word at a time */
+    function splitWords(el){
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      let n;
+      while(n = walker.nextNode()) nodes.push(n);
+      nodes.forEach(textNode => {
+        const parts = textNode.textContent.split(/(\s+)/);
+        const frag = document.createDocumentFragment();
+        parts.forEach(part => {
+          if(part.trim() === ''){ frag.appendChild(document.createTextNode(part)); return; }
+          const mask = document.createElement('span');
+          mask.className = 'word-mask';
+          const inner = document.createElement('span');
+          inner.className = 'word-inner';
+          inner.textContent = part;
+          mask.appendChild(inner);
+          frag.appendChild(mask);
+        });
+        textNode.parentNode.replaceChild(frag, textNode);
+      });
+      return el.querySelectorAll('.word-inner');
+    }
+
+    /* scrambles an element's text through random characters before locking into the real word */
+    function scrambleText(el, finalText, duration = 650){
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      const len = finalText.length;
+      const totalFrames = Math.max(1, Math.round(duration / 16));
+      const revealEvery = totalFrames / len;
+      let frame = 0;
+      (function step(){
+        let out = '';
+        for(let i = 0; i < len; i++){
+          if(finalText[i] === ' '){ out += ' '; continue; }
+          out += frame >= i * revealEvery ? finalText[i] : chars[Math.floor(Math.random() * chars.length)];
+        }
+        el.textContent = out;
+        frame++;
+        if(frame <= totalFrames) requestAnimationFrame(step);
+        else el.textContent = finalText;
+      })();
+    }
+
+    /* top scroll-progress rail, tracks the whole page */
+    gsap.to('#scrollProgress', {
+      scaleX:1, ease:'none',
+      scrollTrigger:{trigger:document.documentElement, start:'top top', end:'bottom bottom', scrub:.3}
+    });
+
+    /* hero parallax — background drifts slower than the foreground content */
+    gsap.to('.hero-bg-wrap', {
+      yPercent:14, ease:'none',
+      scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}
+    });
+    gsap.to('.hero-content', {
+      yPercent:-22, opacity:.25, ease:'none',
+      scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}
+    });
+
+    /* wheat-rule dividers draw themselves once, on arrival, in every section */
+    document.querySelectorAll('.wheat-rule').forEach(svg => {
+      gsap.to(svg.querySelector('path'), {
+        strokeDashoffset:0, duration:1.2, ease:'power2.out',
+        scrollTrigger:{trigger:svg, start:'top 90%', once:true}
+      });
+    });
+
+    /* shared eyebrow / title / subtitle reveal for every section head —
+       title splits word-by-word, gets a gold shimmer sweep and a color morph-in */
+    document.querySelectorAll('.section-head').forEach(head => {
+      const eyebrow = head.querySelector('.eyebrow');
+      const title = head.querySelector('.sec-title');
+      const sub = head.querySelector('.sec-sub');
+      const trigger = {trigger:head, start:'top 85%', once:true};
+
+      if(eyebrow){
+        gsap.from(eyebrow, {opacity:0, y:26, duration:.7, scrollTrigger:trigger});
+        const eyebrowText = eyebrow.textContent;
+        ScrollTrigger.create({
+          trigger:head, start:'top 85%', once:true,
+          onEnter(){ scrambleText(eyebrow, eyebrowText, 650); }
+        });
+      }
+      if(sub) gsap.from(sub, {opacity:0, y:26, duration:.7, delay:.28, scrollTrigger:trigger});
+
+      if(title){
+        const words = splitWords(title);
+        gsap.from(words, {
+          yPercent:115, duration:.9, stagger:.045, ease:'power4.out', delay:.1,
+          scrollTrigger:trigger
+        });
+        const titleColor = getComputedStyle(title).color;
+        gsap.fromTo(title, {color:'#AAB6A9'}, {
+          color:titleColor, ease:'none',
+          scrollTrigger:{trigger:head, start:'top 95%', end:'top 60%', scrub:true}
+        });
+        const em = title.querySelector('em');
+        if(em){
+          gsap.to(em, {
+            backgroundPosition:'-40% 0', duration:1.4, ease:'power2.inOut', delay:.5,
+            scrollTrigger:trigger
+          });
+        }
+      }
+    });
+
+    /* ---- About ---- */
+    const aboutCols = document.querySelectorAll('#about .intro-grid > .fade-up');
+    if(aboutCols[0]){
+      gsap.fromTo(aboutCols[0], {opacity:0,x:-50}, {opacity:1,x:0,duration:1,
+        scrollTrigger:{trigger:aboutCols[0], start:'top 80%', once:true}});
+      gsap.from('#about .stat-item', {
+        opacity:0, y:26, duration:.7, stagger:.1,
+        scrollTrigger:{trigger:'#about .stat-row', start:'top 90%', once:true}
+      });
+      /* typewriter reveal for the intro paragraph */
+      const aboutPara = aboutCols[0].querySelector('.sec-sub');
+      if(aboutPara){
+        const fullText = aboutPara.textContent;
+        const reservedHeight = aboutPara.offsetHeight;
+        ScrollTrigger.create({
+          trigger: aboutPara, start:'top 85%', once:true,
+          onEnter(){
+            aboutPara.style.minHeight = reservedHeight + 'px';
+            aboutPara.textContent = '';
+            const obj = {n:0};
+            gsap.to(obj, {
+              n: fullText.length,
+              duration: Math.min(2.6, fullText.length * 0.006),
+              ease:'none',
+              delay:.5,
+              onUpdate(){ aboutPara.textContent = fullText.slice(0, Math.round(obj.n)); },
+              onComplete(){ aboutPara.style.minHeight = ''; }
+            });
+          }
+        });
+      }
+    }
+    if(aboutCols[1]){
+      gsap.fromTo(aboutCols[1], {opacity:0,x:50}, {opacity:1,x:0,duration:1,
+        scrollTrigger:{trigger:aboutCols[1], start:'top 80%', once:true}});
+      const introImg = aboutCols[1].querySelector('.intro-img-wrap');
+      if(introImg){
+        gsap.fromTo(introImg, {clipPath:'inset(0 0 100% 0)'}, {clipPath:'inset(0 0 0% 0)', duration:1.1, ease:'power4.out',
+          scrollTrigger:{trigger:introImg, start:'top 80%', once:true}});
+        const introImgTag = introImg.querySelector('img');
+        gsap.to(introImgTag, {
+          yPercent:-8, ease:'none',
+          scrollTrigger:{trigger:introImg, start:'top bottom', end:'bottom top', scrub:true}
+        });
+        gsap.fromTo(introImgTag, {filter:'grayscale(1) brightness(.85)'}, {filter:'grayscale(0) brightness(1)', duration:1.4, ease:'power2.out', delay:.3,
+          scrollTrigger:{trigger:introImg, start:'top 80%', once:true}});
+        gsap.to(introImgTag, {scale:1.07, duration:9, ease:'sine.inOut', yoyo:true, repeat:-1});
+        gsap.fromTo(introImg.querySelector('.intro-badge'), {opacity:0,y:20,scale:.9}, {opacity:1,y:0,scale:1,duration:.7,delay:.5,
+          scrollTrigger:{trigger:introImg, start:'top 80%', once:true}});
+      }
+    }
+
+    /* ---- Vision & Mission — cards tip in with a subtle 3D fold ---- */
+    gsap.set('#vision .values-grid', {perspective:1000});
+    gsap.utils.toArray('#vision .value-card').forEach((card, i) => {
+      gsap.fromTo(card, {opacity:0, y:60, rotateX:-20, transformOrigin:'top center'},
+        {opacity:1, y:0, rotateX:0, duration:.9, delay:i*.08,
+          scrollTrigger:{trigger:card, start:'top 88%', once:true}});
+    });
+
+    /* ---- Why Choose — card rises, icon pops with a back-ease spin ---- */
+    gsap.utils.toArray('#why .feat-card').forEach((card, i) => {
+      const icon = card.querySelector('.feat-icon');
+      gsap.timeline({scrollTrigger:{trigger:card, start:'top 88%', once:true}, delay:i*.07})
+        .fromTo(card, {opacity:0,y:50}, {opacity:1,y:0,duration:.7})
+        .fromTo(icon, {scale:0,rotate:-110}, {scale:1,rotate:0,duration:.55,ease:'back.out(2)'}, '-=.35');
+    });
+
+    /* ---- Products — curtain-wipe reveal, staggered, photo blooms from monochrome to color ---- */
+    gsap.utils.toArray('#products .product-card').forEach((card, i) => {
+      gsap.fromTo(card, {opacity:0, y:70, clipPath:'inset(0 0 100% 0)'},
+        {opacity:1, y:0, clipPath:'inset(0 0 0% 0)', duration:1, ease:'power4.out', delay:i*.08,
+          scrollTrigger:{trigger:card, start:'top 88%', once:true}});
+      const img = card.querySelector('.product-img img');
+      if(img) gsap.fromTo(img, {filter:'grayscale(1) brightness(.85)'}, {filter:'grayscale(0) brightness(1)', duration:1, ease:'power2.out', delay:i*.08+.3,
+        scrollTrigger:{trigger:card, start:'top 88%', once:true}});
+    });
+
+    /* ---- Farm Operations — signature timeline: numbers pop, copy slides in, image wipes + zooms ---- */
+    gsap.utils.toArray('.op-step').forEach(step => {
+      gsap.set(step, {opacity:1}); // cancel base fade-up hide; children carry the reveal
+      const num = step.querySelector('.op-num');
+      const body = step.querySelector('.op-body');
+      gsap.timeline({scrollTrigger:{trigger:step, start:'top 85%', once:true}})
+        .fromTo(num, {scale:0, opacity:0}, {scale:1, opacity:1, duration:.5, ease:'back.out(2.4)'})
+        .fromTo(body, {opacity:0, x:26}, {opacity:1, x:0, duration:.6}, '-=.25');
+    });
+    gsap.fromTo('.ops-img', {opacity:0, clipPath:'inset(0 100% 0 0)'}, {opacity:1, clipPath:'inset(0 0% 0 0)', duration:1.1, ease:'power4.out',
+      scrollTrigger:{trigger:'.ops-img', start:'top 80%', once:true}});
+    gsap.fromTo('.ops-img img', {filter:'grayscale(1) brightness(.85)'}, {filter:'grayscale(0) brightness(1)', duration:1.4, ease:'power2.out', delay:.3,
+      scrollTrigger:{trigger:'.ops-img', start:'top 80%', once:true}});
+    gsap.to('.ops-img img', {
+      scale:1.1, ease:'none',
+      scrollTrigger:{trigger:'.ops-wrap', start:'top bottom', end:'bottom top', scrub:true}
+    });
+
+    /* ---- Commitments — card rises, then the progress ring fills ---- */
+    gsap.utils.toArray('.pillar-card').forEach((card, i) => {
+      const ring = card.querySelector('.pillar-ring .fg');
+      const target = parseFloat(ring.style.getPropertyValue('--offset'));
+      gsap.timeline({scrollTrigger:{trigger:card, start:'top 87%', once:true}, delay:i*.08})
+        .fromTo(card, {opacity:0,y:50,scale:.92}, {opacity:1,y:0,scale:1,duration:.7})
+        .fromTo(ring, {strokeDashoffset:170}, {strokeDashoffset:target, duration:1.3, ease:'power2.out'}, '-=.45');
+    });
+
+    /* ---- Gallery — cards drift up with a light alternating tilt, photos bloom into color ---- */
+    gsap.utils.toArray('.gallery-item').forEach((item, i) => {
+      gsap.fromTo(item, {opacity:0, y:60, rotate: i % 2 ? 2.5 : -2.5},
+        {opacity:1, y:0, rotate:0, duration:.8, delay:(i % 5)*.06,
+          scrollTrigger:{trigger:item, start:'top 92%', once:true}});
+      const img = item.querySelector('img');
+      if(img) gsap.fromTo(img, {filter:'grayscale(1) brightness(.85)'}, {filter:'grayscale(0) brightness(1)', duration:1, ease:'power2.out', delay:(i % 5)*.06+.3,
+        scrollTrigger:{trigger:item, start:'top 92%', once:true}});
+    });
+
+    /* ---- Testimonials — cards unfold with a slight 3D turn ---- */
+    gsap.set('.testi-track', {perspective:1000});
+    gsap.utils.toArray('.testi-card').forEach((card, i) => {
+      gsap.fromTo(card, {opacity:0, y:60, rotateY:-25, transformOrigin:'left center'},
+        {opacity:1, y:0, rotateY:0, duration:.9, delay:i*.12,
+          scrollTrigger:{trigger:card, start:'top 88%', once:true}});
+    });
+
+    /* ---- CTA band — scales up out of a soft glow ---- */
+    gsap.fromTo('.cta-band', {opacity:0, scale:.93}, {opacity:1, scale:1, duration:1,
+      scrollTrigger:{trigger:'.cta-band', start:'top 85%', once:true}});
+    gsap.from('.cta-band h2, .cta-band p, .cta-band .cta-btns', {
+      opacity:0, y:24, duration:.8, stagger:.12, delay:.2,
+      scrollTrigger:{trigger:'.cta-band', start:'top 80%', once:true}
+    });
+
+    /* ---- Contact — one timeline: panels slide in from opposite sides, fields cascade ---- */
+    const contactTl = gsap.timeline({
+      scrollTrigger:{trigger:'.contact-layout', start:'top 82%', once:true}
+    });
+    contactTl
+      .fromTo('.contact-card', {opacity:0, x:-60}, {opacity:1, x:0, duration:.9}, 0)
+      .fromTo('.contact-form-wrap', {opacity:0, x:60}, {opacity:1, x:0, duration:.9}, 0)
+      .fromTo('#contactForm .cf-group, #contactForm .cf-submit, #contactForm .cf-note',
+        {opacity:0, y:18}, {opacity:1, y:0, duration:.5, stagger:.07}, .35);
+
+    /* ---- Footer — columns settle in together ---- */
+    gsap.from('.footer-top > div', {
+      opacity:0, y:30, duration:.8, stagger:.1,
+      scrollTrigger:{trigger:'.site-footer', start:'top 92%', once:true}
+    });
+
+    /* ---- 3D hover tilt — cards subtly turn toward the cursor ---- */
+    if(window.matchMedia('(hover:hover)').matches){
+      const addTilt = (selector, opts = {}) => {
+        const tilt = opts.tilt ?? 7;
+        const lift = opts.lift ?? 0;
+        const scaleTo = opts.scale ?? 1.015;
+        document.querySelectorAll(selector).forEach(card => {
+          card.style.transformPerspective = '900px';
+          card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            const px = (e.clientX - r.left) / r.width - .5;
+            const py = (e.clientY - r.top) / r.height - .5;
+            gsap.to(card, {rotationY:px*tilt, rotationX:-py*tilt, y:lift, scale:scaleTo, duration:.5, ease:'power3.out', overwrite:'auto'});
+          });
+          card.addEventListener('mouseleave', () => {
+            gsap.to(card, {rotationY:0, rotationX:0, y:0, scale:1, duration:.6, ease:'power3.out', overwrite:'auto'});
+          });
+        });
+      };
+      addTilt('.product-card', {tilt:6, lift:-8, scale:1.015});
+      addTilt('.value-card', {tilt:6, lift:-6, scale:1.015});
+      addTilt('.feat-card', {tilt:6, lift:-5, scale:1.02});
+      addTilt('.gallery-item', {tilt:8, lift:0, scale:1.015});
+      addTilt('.pillar-card', {tilt:6, lift:-4, scale:1.015});
+      addTilt('.testi-card', {tilt:5, lift:-4, scale:1.01});
+    }
+
+    ScrollTrigger.refresh();
+  });
+
+  /* gallery carousel */
+  const galleryTrack = document.getElementById('galleryGrid');
+  const galPrev = document.getElementById('galPrev');
+  const galNext = document.getElementById('galNext');
+  const galleryItems = Array.from(document.querySelectorAll('#galleryGrid .gallery-item'));
+
+  function cardStep(){
+    const card = galleryTrack.querySelector('.gallery-item');
+    if(!card) return 300;
+    const style = getComputedStyle(galleryTrack);
+    const gap = parseFloat(style.columnGap || style.gap) || 0;
+    return card.getBoundingClientRect().width + gap;
+  }
+  function galleryScroll(dir){
+    const maxScroll = galleryTrack.scrollWidth - galleryTrack.clientWidth;
+    if(dir > 0 && galleryTrack.scrollLeft >= maxScroll - 4){
+      galleryTrack.scrollTo({left:0, behavior:'smooth'});
+    } else if(dir < 0 && galleryTrack.scrollLeft <= 4){
+      galleryTrack.scrollTo({left:maxScroll, behavior:'smooth'});
+    } else {
+      galleryTrack.scrollBy({left: dir*cardStep(), behavior:'smooth'});
+    }
+  }
+  let galAutoTimer;
+  function startGalleryAuto(){
+    stopGalleryAuto();
+    galAutoTimer = setInterval(() => galleryScroll(1), 3200);
+  }
+  function stopGalleryAuto(){ clearInterval(galAutoTimer); }
+  function restartGalleryAutoDelayed(){ stopGalleryAuto(); setTimeout(startGalleryAuto, 4500); }
+
+  if(galleryTrack){
+    galPrev.addEventListener('click', () => { galleryScroll(-1); restartGalleryAutoDelayed(); });
+    galNext.addEventListener('click', () => { galleryScroll(1); restartGalleryAutoDelayed(); });
+    galleryTrack.addEventListener('mouseenter', stopGalleryAuto);
+    galleryTrack.addEventListener('mouseleave', startGalleryAuto);
+    galleryTrack.addEventListener('touchstart', stopGalleryAuto, {passive:true});
+    galleryTrack.addEventListener('touchend', restartGalleryAutoDelayed, {passive:true});
+    startGalleryAuto();
+  }
+
+  /* gallery lightbox */
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbTitle = document.getElementById('lbTitle');
+  const lbCat = document.getElementById('lbCat');
+  const lbCounter = document.getElementById('lbCounter');
+  let lbIndex = 0;
+
+  function renderLightbox(){
+    const item = galleryItems[lbIndex];
+    if(!item) return;
+    lbImg.src = item.dataset.full;
+    lbImg.alt = item.dataset.title || '';
+    lbTitle.textContent = item.dataset.title || '';
+    lbCat.textContent = item.dataset.cat || '';
+    lbCounter.textContent = (lbIndex+1) + ' / ' + galleryItems.length;
+  }
+  window.openLightbox = (i) => {
+    lbIndex = i;
+    renderLightbox();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    stopGalleryAuto();
+  };
+  window.closeLightbox = () => {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    startGalleryAuto();
+  };
+  window.stepLightbox = (dir) => {
+    lbIndex = (lbIndex + dir + galleryItems.length) % galleryItems.length;
+    renderLightbox();
+  };
+  galleryItems.forEach((item, i) => {
+    item.addEventListener('click', () => openLightbox(i));
+  });
+  document.addEventListener('keydown', e => {
+    if(!lightbox.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowRight') stepLightbox(1);
+    if(e.key === 'ArrowLeft') stepLightbox(-1);
+  });
+
+  if(window.scrollY > 60) nb.classList.add('floating');
+  if(window.scrollY > 30) nb.classList.add('scrolled-logo');
+})();
+</script>
+</body>
+</html>
