@@ -35,7 +35,7 @@
   --container-max:1360px;
   --container-pad:clamp(1.2rem,3vw,4rem);
 }
-html{scroll-behavior:smooth;font-size:16px}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden;width:100%}
 body{font-family:'Manrope',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background .3s ease,color .3s ease}
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
@@ -71,7 +71,7 @@ body.dark-mode .sec-title em{background:linear-gradient(100deg,var(--gold) 25%,#
 
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 2.1rem;border-radius:99px;font-weight:700;font-size:.92rem;transition:var(--tr);border:2px solid transparent;white-space:nowrap;position:relative;overflow:hidden}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 2.1rem;border-radius:99px;font-weight:700;font-size:.92rem;transition:var(--tr);border:2px solid transparent;white-space:nowrap;position:relative;overflow:hidden;min-width:0;max-width:100%}
 .btn .ripple,.cf-submit .ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(0);opacity:.55;pointer-events:none;animation:rippleFx .65s ease-out forwards}
 .btn-outline .ripple{background:rgba(15,58,34,.2)}
 body.dark-mode .btn-outline .ripple{background:rgba(255,255,255,.3)}
@@ -222,7 +222,7 @@ body.dark-mode .nav-link.active-section{color:var(--gold)}
 /* ══════════════════════════════════
    SECTION SHELLS
 ══════════════════════════════════ */
-.section{padding:clamp(3.5rem,7vw,7rem) 0;position:relative}
+.section{padding:clamp(3.5rem,7vw,7rem) 0;position:relative;overflow-x:clip}
 .about-section,.pillars-section,.stats-band{background:var(--green-light)}
 .about-section,.pillars-section{position:relative}
 .about-section::before,.pillars-section::before{content:'';position:absolute;top:0;left:0;right:0;height:90px;background:linear-gradient(180deg,var(--cream),transparent);pointer-events:none;z-index:0}
@@ -260,6 +260,7 @@ body.dark-mode .stat-num{color:var(--gold)}
 
 /* values grid */
 .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.vision-grid{grid-template-columns:repeat(2,1fr)!important;margin-bottom:2.5rem}
 .value-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:2rem 1.7rem;transition:var(--tr)}
 .value-card:hover{box-shadow:var(--shadow-md);border-color:var(--gold)}
 .value-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--green-dark));color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1.2rem}
@@ -512,13 +513,14 @@ body.dark-mode .wa-bubble::after{background:var(--green-dark);border-color:rgba(
 }
 @media(max-width:720px){
   html{font-size:15px}
-  .hero{min-height:560px}
-  .hero-content{padding-bottom:4rem}
-  .hero h1{max-width:100%}
-  .hero p{max-width:100%}
-  .hero-badges{gap:1.4rem 2rem}
-  .hero-btns{gap:.8rem}
-  .hero-btns .btn{flex:1 1 auto;justify-content:center}
+  .hero{min-height:600px;align-items:flex-end}
+  .hero-content{padding-bottom:4.2rem}
+  .hero-overlay{background:linear-gradient(180deg,rgba(10,42,24,.72) 0%,rgba(10,42,24,.86) 100%)}
+  .hero h1{max-width:100%;margin-bottom:.9rem}
+  .hero p{max-width:100%;margin-bottom:1.7rem}
+  .hero-btns{display:none}
+  .hero-badges{display:none}
+  .hero-scroll{display:none}
   .values-grid,.feat-grid,.product-grid,.pillars-grid,.testi-track{grid-template-columns:1fr 1fr}
   .cf-row{grid-template-columns:1fr}
   .cf-group{margin-bottom:.8rem}
@@ -541,13 +543,13 @@ body.dark-mode .wa-bubble::after{background:var(--green-dark);border-color:rgba(
   .container{padding:0 1.1rem}
   .sec-title{font-size:clamp(1.55rem,6.5vw,2.1rem)}
   .sec-sub{max-width:100%}
-  .hero h1{font-size:clamp(1.9rem,8.4vw,2.5rem);max-width:100%}
-  .hero p{font-size:.95rem;max-width:100%}
-  .hero-eyebrow{font-size:.7rem}
-  .hero-badges{gap:1.1rem 1.8rem}
-  .hbadge-num{font-size:clamp(1.4rem,6vw,1.8rem)}
+  .hero{min-height:560px}
+  .hero h1{font-size:clamp(1.85rem,8vw,2.3rem);max-width:100%;line-height:1.15}
+  .hero p{font-size:.92rem;line-height:1.65;max-width:100%;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .hero-eyebrow{font-size:.66rem;margin-bottom:1rem}
   .btn{padding:.85rem 1.6rem;font-size:.86rem}
   .values-grid,.feat-grid,.product-grid,.pillars-grid,.testi-track{grid-template-columns:1fr}
+  .vision-grid{grid-template-columns:1fr!important}
   .value-card,.pillar-card,.testi-card{padding:1.6rem 1.4rem}
   .feat-card{padding:1.5rem 1.2rem}
   .stat-row{grid-template-columns:1fr 1fr;gap:1.2rem 1.2rem;margin-top:2.2rem}
@@ -563,8 +565,6 @@ body.dark-mode .wa-bubble::after{background:var(--green-dark);border-color:rgba(
   .lightbox-figure{max-width:94vw}
 }
 @media(max-width:420px){
-  .hero-badges{width:100%;justify-content:space-between;gap:.8rem}
-  .hero-btns{flex-direction:column;align-items:stretch}
   .stat-row{grid-template-columns:1fr;gap:1rem}
   .stat-item{border-left:2px solid var(--gold);padding-left:.9rem}
   .cf-group input,.cf-group select,.cf-group textarea{padding:.7rem .85rem;font-size:.85rem}
@@ -810,7 +810,7 @@ body.dark-mode .wa-bubble::after{background:var(--green-dark);border-color:rgba(
       <h2 class="sec-title">What drives every flock we raise</h2>
       <svg class="wheat-rule" viewBox="0 0 74 22" style="margin-left:auto;margin-right:auto"><path d="M4 20 Q 20 6 70 4 M18 14 l-6-6 M18 14 l2-8 M30 10 l-6-6 M30 10 l2-8 M42 7 l-6-6 M42 7 l2-8"/></svg>
     </div>
-    <div class="values-grid" style="grid-template-columns:1fr 1fr;margin-bottom:2.5rem">
+    <div class="values-grid vision-grid">
       <div class="value-card fade-up">
         <div class="value-icon"><i class="fas fa-eye"></i></div>
         <h4>Our Vision</h4>
