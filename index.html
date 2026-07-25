@@ -456,7 +456,8 @@ body.dark-mode .wa-bubble::after{background:var(--green-dark);border-color:rgba(
 .drawer-open .drawer-panel{transform:translateX(0);pointer-events:all}
 .drawer-close{position:absolute;top:1rem;right:1rem;width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.9rem;color:var(--ink);transition:var(--tr)}
 .drawer-close:hover{background:var(--gold);color:var(--green-deep);border-color:var(--gold)}
-.drawer-logo{display:flex;align-items:center;gap:.6rem;margin-bottom:2rem}
+.drawer-logo{display:flex;align-items:center;gap:.6rem;margin-bottom:1.4rem}
+.drawer-cta{width:100%;justify-content:center;margin-bottom:1.8rem}
 .drawer-logo strong{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--green-dark)}
 .drawer-section{margin-bottom:1.4rem}
 .drawer-section h5{font-size:.65rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-bottom:.7rem;padding-left:.5rem}
@@ -485,30 +486,91 @@ body.dark-mode .wa-bubble::after{background:var(--green-dark);border-color:rgba(
 .footer-bottom-links a:hover{color:var(--gold-light)}
 
 /* ══════════════════════════════════
-   RESPONSIVE
+   RESPONSIVE — mobile-first refinements
 ══════════════════════════════════ */
+@media(max-width:1180px){
+  .mega-menu{min-width:520px}
+  .mega-menu.cols-4 .mega-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:1100px){
   .nav-menu{display:none}
   .hamburger{display:flex}
+  #partnerBtn{display:none}
   .intro-grid,.ops-wrap,.contact-layout{grid-template-columns:1fr}
   .ops-img{position:relative;top:0}
+  .ops-img img{height:clamp(260px,50vw,420px)}
   .stat-row{grid-template-columns:repeat(2,1fr)}
   .values-grid,.feat-grid,.product-grid,.pillars-grid,.testi-track{grid-template-columns:repeat(2,1fr)}
   .footer-top{grid-template-columns:1fr 1fr}
+  .contact-card{order:2}
+  .contact-form-wrap{order:1}
+}
+@media(max-width:860px){
+  .section{padding:clamp(2.8rem,8vw,5rem) 0}
+  .intro-img-wrap img{height:clamp(240px,48vw,360px)}
+  .stat-row{gap:1.1rem 1.5rem}
 }
 @media(max-width:720px){
+  html{font-size:15px}
+  .hero{min-height:560px}
   .hero-content{padding-bottom:4rem}
   .hero h1{max-width:100%}
   .hero p{max-width:100%}
-  .hero-badges{gap:1.4rem}
+  .hero-badges{gap:1.4rem 2rem}
+  .hero-btns{gap:.8rem}
+  .hero-btns .btn{flex:1 1 auto;justify-content:center}
   .values-grid,.feat-grid,.product-grid,.pillars-grid,.testi-track{grid-template-columns:1fr 1fr}
   .cf-row{grid-template-columns:1fr}
-  .footer-top{grid-template-columns:1fr}
+  .cf-group{margin-bottom:.8rem}
+  .footer-top{grid-template-columns:1fr;gap:1.8rem}
+  .footer-top>div>p{max-width:100%}
+  .footer-bottom{flex-direction:column;text-align:center;gap:.6rem}
+  .footer-bottom-links{justify-content:center;flex-wrap:wrap}
+  .contact-card,.contact-form-wrap{padding:1.6rem}
+  .cta-band{padding:clamp(2rem,8vw,3rem) 1.5rem}
+  .cta-btns{flex-direction:column;align-items:stretch}
+  .cta-btns .btn{justify-content:center}
+  .section-head{margin-bottom:2.2rem}
+  .op-step{gap:1rem}
+  .sticky-cta{bottom:1.2rem;right:1.2rem;gap:.55rem}
+  .sticky-btn{width:46px;height:46px;font-size:1rem}
+  .sticky-label{display:none}
+  .wa-bubble{width:min(230px,72vw);right:-.5rem}
 }
-@media(max-width:480px){
+@media(max-width:600px){
+  .container{padding:0 1.1rem}
+  .sec-title{font-size:clamp(1.55rem,6.5vw,2.1rem)}
+  .sec-sub{max-width:100%}
+  .hero h1{font-size:clamp(1.9rem,8.4vw,2.5rem);max-width:100%}
+  .hero p{font-size:.95rem;max-width:100%}
+  .hero-eyebrow{font-size:.7rem}
+  .hero-badges{gap:1.1rem 1.8rem}
+  .hbadge-num{font-size:clamp(1.4rem,6vw,1.8rem)}
+  .btn{padding:.85rem 1.6rem;font-size:.86rem}
   .values-grid,.feat-grid,.product-grid,.pillars-grid,.testi-track{grid-template-columns:1fr}
-  .stat-row{grid-template-columns:1fr 1fr}
-  .hero h1{font-size:clamp(1.9rem,8vw,2.4rem)}
+  .value-card,.pillar-card,.testi-card{padding:1.6rem 1.4rem}
+  .feat-card{padding:1.5rem 1.2rem}
+  .stat-row{grid-template-columns:1fr 1fr;gap:1.2rem 1.2rem;margin-top:2.2rem}
+  .stat-num{font-size:clamp(1.5rem,6vw,2rem)}
+  .product-img{height:190px}
+  .gallery-item{flex-basis:78vw;height:60vw;max-height:340px}
+  .gallery-arrow{width:38px;height:38px;font-size:.8rem}
+  .op-num{width:40px;height:40px;font-size:1rem}
+  .op-step:not(:last-child)::after{left:19px}
+  .drawer-panel{padding:1.6rem 1.2rem}
+  .nav-logo-mark{width:52px!important;height:52px!important}
+  .nav-logo-text strong{font-size:1.12rem}
+  .lightbox-figure{max-width:94vw}
+}
+@media(max-width:420px){
+  .hero-badges{width:100%;justify-content:space-between;gap:.8rem}
+  .hero-btns{flex-direction:column;align-items:stretch}
+  .stat-row{grid-template-columns:1fr;gap:1rem}
+  .stat-item{border-left:2px solid var(--gold);padding-left:.9rem}
+  .cf-group input,.cf-group select,.cf-group textarea{padding:.7rem .85rem;font-size:.85rem}
+  .contact-info-item{padding:.75rem .9rem}
+  .wa-bubble{width:min(210px,68vw);font-size:.75rem}
+  .sticky-cta{bottom:1rem;right:1rem}
 }
 @media(prefers-reduced-motion:reduce){
   .fade-up,.ticker-track,.scroll-dot::after{animation:none!important;opacity:1!important;transform:none!important}
@@ -520,6 +582,11 @@ body.dark-mode .wa-bubble::after{background:var(--green-dark);border-color:rgba(
   .wave-divider svg{animation:none!important}
   .sticky-btn.whatsapp,.sticky-btn.whatsapp i,.sticky-btn.whatsapp::before,.sticky-btn.whatsapp::after{animation:none!important}
   .sticky-btn.whatsapp::before,.sticky-btn.whatsapp::after{display:none!important}
+}
+/* prevent any accidental horizontal scroll on small screens */
+@media(max-width:480px){
+  body{overflow-x:hidden}
+  img,svg,video{max-width:100%}
 }
 </style>
 </head>
@@ -554,6 +621,7 @@ body.dark-mode .wa-bubble::after{background:var(--green-dark);border-color:rgba(
       <div class="nav-logo-mark"><img src="logo.png" alt="Hasad Logo"></div>
       <strong>Hasad</strong>
     </div>
+    <a href="#contact" class="btn btn-solid-green drawer-cta" onclick="closeDrawer()"><i class="fas fa-handshake"></i> Partner With Us</a>
     <div class="drawer-section">
       <h5>Products</h5>
       <a class="drawer-link" href="#products"><i class="fas fa-drumstick-bite"></i> Fresh Chicken</a>
