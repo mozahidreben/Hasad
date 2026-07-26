@@ -597,16 +597,29 @@ html[dir="rtl"] .stat-item{text-align:right;border-left:none;padding-left:0;bord
   html[dir="rtl"] .stat-item{border-left:none;padding-left:0;border-right:2px solid var(--gold);padding-right:.9rem}
 }
 html[dir="rtl"] .sec-sub{max-width:600px}
-html[dir="rtl"] #ticker,html[dir="rtl"] #galleryGrid{direction:ltr}
+html[dir="rtl"] .ticker-bar,html[dir="rtl"] #ticker,html[dir="rtl"] #galleryGrid{direction:ltr}
 html[dir="rtl"] .wave-divider,html[dir="rtl"] .wave-divider svg{direction:ltr}
 html[dir="rtl"] .op-step:not(:last-child)::after{left:auto;right:19px}
 html[dir="rtl"] .contact-info-item:hover,html[dir="rtl"] .mega-link:hover{transform:translateX(-4px)}
-html[dir="rtl"] .sticky-label{transform:translateX(-8px)}
-html[dir="rtl"] .sticky-row:hover .sticky-label{transform:translateX(0)}
 html[dir="rtl"] .drawer-panel{right:auto;left:0;box-shadow:4px 0 40px rgba(0,0,0,.15);transform:translateX(-100%)}
 html[dir="rtl"] .drawer-open .drawer-panel{transform:translateX(0)}
 html[dir="rtl"] .fa-arrow-right:before{content:"\f060"}
 html[dir="rtl"] .fa-chevron-right.nav-caret,html[dir="rtl"] .nav-link i.fa-chevron-down{margin-right:.3rem;margin-left:0}
+
+/* sticky WhatsApp / back-to-top cluster — mirrored to the left in RTL */
+html[dir="rtl"] .sticky-cta{right:auto;left:1.8rem;align-items:flex-start}
+html[dir="rtl"] .sticky-label{transform:translateX(-8px)}
+html[dir="rtl"] .sticky-row:hover .sticky-label{transform:translateX(0)}
+html[dir="rtl"] .wa-bubble{right:auto;left:0;border-radius:16px 16px 16px 4px;transform-origin:bottom left}
+html[dir="rtl"] .wa-bubble-close{right:auto;left:.45rem}
+html[dir="rtl"] .wa-bubble::after{right:auto;left:20px;border-right:none;border-left:1px solid var(--border)}
+@media(max-width:900px){
+  html[dir="rtl"] .sticky-cta{right:auto;left:1.2rem}
+  html[dir="rtl"] .wa-bubble{right:auto;left:-.5rem}
+}
+@media(max-width:420px){
+  html[dir="rtl"] .sticky-cta{right:auto;left:1rem}
+}
 </style>
 </head>
 <body>
@@ -733,9 +746,8 @@ html[dir="rtl"] .fa-chevron-right.nav-caret,html[dir="rtl"] .nav-link i.fa-chevr
 
       <div class="nav-actions">
         <a href="#contact" class="btn btn-solid-green btn-sm magnetic-btn" id="partnerBtn">كن شريكًا معنا</a>
-<a href="../" class="icon-btn">
-    <span>EN</span>
-</a>        <button class="icon-btn" id="themeToggle" title="تبديل الوضع الداكن"><i class="fas fa-moon"></i></button>
+        <a href="../" class="icon-btn" id="langToggle" title="التبديل إلى الإنجليزية"><i class="fas fa-globe"></i> <span>EN</span></a>
+        <button class="icon-btn" id="themeToggle" title="تبديل الوضع الداكن"><i class="fas fa-moon"></i></button>
         <div class="hamburger" id="hamBtn" onclick="openDrawer()"><span></span><span></span><span></span></div>
       </div>
     </div>
@@ -1405,7 +1417,7 @@ html[dir="rtl"] .fa-chevron-right.nav-caret,html[dir="rtl"] .nav-link i.fa-chevr
       e.preventDefault();
       const btn = cf.querySelector('.cf-submit');
       const original = btn.innerHTML;
-      btn.innerHTML = '<i class="fas fa-check"></i> Message Sent';
+      btn.innerHTML = '<i class="fas fa-check"></i> تم إرسال الرسالة';
       setTimeout(() => { btn.innerHTML = original; cf.reset(); }, 2200);
     });
   }
@@ -1424,6 +1436,7 @@ html[dir="rtl"] .fa-chevron-right.nav-caret,html[dir="rtl"] .nav-link i.fa-chevr
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ revealFallback(); return; }
 
     gsap.registerPlugin(ScrollTrigger);
+    const isRTL = document.documentElement.dir === 'rtl';
     gsap.defaults({ease:'power3.out'});
 
     /* wraps every word of an element's text (including inside nested tags like <em>)
@@ -1537,7 +1550,7 @@ html[dir="rtl"] .fa-chevron-right.nav-caret,html[dir="rtl"] .nav-link i.fa-chevr
     /* ---- About ---- */
     const aboutCols = document.querySelectorAll('#about .intro-grid > .fade-up');
     if(aboutCols[0]){
-      gsap.fromTo(aboutCols[0], {opacity:0,x:-50}, {opacity:1,x:0,duration:1,
+      gsap.fromTo(aboutCols[0], {opacity:0,x:isRTL?50:-50}, {opacity:1,x:0,duration:1,
         scrollTrigger:{trigger:aboutCols[0], start:'top 80%', once:true}});
       gsap.from('#about .stat-item', {
         opacity:0, y:26, duration:.7, stagger:.1,
@@ -1567,7 +1580,7 @@ html[dir="rtl"] .fa-chevron-right.nav-caret,html[dir="rtl"] .nav-link i.fa-chevr
       }
     }
     if(aboutCols[1]){
-      gsap.fromTo(aboutCols[1], {opacity:0,x:50}, {opacity:1,x:0,duration:1,
+      gsap.fromTo(aboutCols[1], {opacity:0,x:isRTL?-50:50}, {opacity:1,x:0,duration:1,
         scrollTrigger:{trigger:aboutCols[1], start:'top 80%', once:true}});
       const introImg = aboutCols[1].querySelector('.intro-img-wrap');
       if(introImg){
@@ -1670,8 +1683,8 @@ html[dir="rtl"] .fa-chevron-right.nav-caret,html[dir="rtl"] .nav-link i.fa-chevr
       scrollTrigger:{trigger:'.contact-layout', start:'top 82%', once:true}
     });
     contactTl
-      .fromTo('.contact-card', {opacity:0, x:-60}, {opacity:1, x:0, duration:.9}, 0)
-      .fromTo('.contact-form-wrap', {opacity:0, x:60}, {opacity:1, x:0, duration:.9}, 0)
+      .fromTo('.contact-card', {opacity:0, x:isRTL?60:-60}, {opacity:1, x:0, duration:.9}, 0)
+      .fromTo('.contact-form-wrap', {opacity:0, x:isRTL?-60:60}, {opacity:1, x:0, duration:.9}, 0)
       .fromTo('#contactForm .cf-group, #contactForm .cf-submit, #contactForm .cf-note',
         {opacity:0, y:18}, {opacity:1, y:0, duration:.5, stagger:.07}, .35);
 
